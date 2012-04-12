@@ -15,6 +15,7 @@
  * @property string $created
  */
 class Register extends CActiveRecord {
+    public $password_repeat;
 	
 	/**
 	 * Returns the static model of the specified AR class.
@@ -46,7 +47,7 @@ class Register extends CActiveRecord {
 				// array('username, password, name_first, name_last, email,
 				// active, created', 'required'),
 				array (
-						'username, password, name_first, name_last, email',
+						'username, password,password_repeat, name_first, name_last, email',
 						'required' 
 				),
 				array (
@@ -69,6 +70,9 @@ class Register extends CActiveRecord {
 						'length',
 						'max' => 255 
 				),
+                                array('email, username','unique'),
+                                array('password','compare'),
+                                array('password_repeat','safe'),
 				// The following rule is used by search().
 				// Please remove those attributes that should not be searched.
 				array (
@@ -124,6 +128,7 @@ class Register extends CActiveRecord {
 				'user_id' => 'User',
 				'username' => 'Username',
 				'password' => 'Password',
+                                'password_repeat' =>'Password Repeat', 
 				'name_first' => 'Name First',
 				'name_last' => 'Name Last',
 				'email' => 'Email',
