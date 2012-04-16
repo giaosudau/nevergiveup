@@ -27,6 +27,7 @@
 		<?php $this->widget('zii.widgets.jui.CJuiDatePicker',
         array(
             'model'=>$model,
+            'attribute'=>'dob',
             'name'=>'dob',
             'value'=>'',
             'language'=>'',
@@ -99,15 +100,11 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'hobbies'); ?>
-		<?php echo $form->textField($model,'hobbies',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textArea($model,'hobbies',array('size'=>150,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'hobbies'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'created'); ?>
-		<?php echo $form->textField($model,'created'); ?>
-		<?php echo $form->error($model,'created'); ?>
-	</div>
+
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
