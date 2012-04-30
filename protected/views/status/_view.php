@@ -20,6 +20,8 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created')); ?>:</b>
 	<?php echo CHtml::encode($data->created); ?>
 	<br />
+	
+	<?php $this->renderPartial('_thumbupdown',array('status_id' =>$data->status_id))?>
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('thumbs_up')); ?>:</b>
 	<?php echo CHtml::encode($data->thumbs_up); ?>

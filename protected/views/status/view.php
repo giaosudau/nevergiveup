@@ -1,15 +1,31 @@
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    $('body').delegate('#btnthumbup','click', function(){
+        $("btnthumbup").val('down');
+        $.ajax({
+           'url': '',
+           'success': function(html){
+               $('thumbup').html("Hell");
+           }
+        });
+    });
+
+</script>
+
+
+
 <?php
 $this->breadcrumbs = array(
-'Statuses' => array('index'),
- $model->status_id,
+    'Statuses' => array('index'),
+    $model->status_id,
 );
 
 $this->menu = array(
-array('label' => 'List Status', 'url' => array('index')),
- array('label' => 'Create Status', 'url' => array('create')),
- array('label' => 'Update Status', 'url' => array('update', 'id' => $model->status_id)),
- array('label' => 'Delete Status', 'url' => '#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->status_id), 'confirm' => 'Are you sure you want to delete this item?')),
- array('label' => 'Manage Status', 'url' => array('admin')),
+    array('label' => 'List Status', 'url' => array('index')),
+    array('label' => 'Create Status', 'url' => array('create')),
+    array('label' => 'Update Status', 'url' => array('update', 'id' => $model->status_id)),
+    array('label' => 'Delete Status', 'url' => '#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->status_id), 'confirm' => 'Are you sure you want to delete this item?')),
+    array('label' => 'Manage Status', 'url' => array('admin')),
 );
 ?>
 
@@ -17,30 +33,33 @@ array('label' => 'List Status', 'url' => array('index')),
 
 <?php
 $this->widget('zii.widgets.CDetailView', array(
-'data' => $model,
- 'attributes' => array(
-'status_id',
- 'message',
- 'created',
- 'thumbs_up',
- 'thumbs_down',
- 'reply',
- 'user_id',
- ),
+    'data' => $model,
+    'attributes' => array(
+        'status_id',
+        'message',
+        'created',
+        'thumbs_up',
+        'thumbs_down',
+        'reply',
+        'user_id',
+    ),
 ));
 ?>
+<?php $this->renderPartial('_thumbupdown',array('status_id' =>$model->status_id, 'like'=>$like));?>
+<form>
 
+</form>
 <div id="comments">
-    <?php if($model->commentCount >= 1): ?>
-    <h3>
-        <?php echo $model->commentCount > 1 ? $model->commentCount . '
+    <?php if ($model->commentCount >= 1): ?>
+        <h3>
+            <?php echo $model->commentCount > 1 ? $model->commentCount . '
 comments' : 'One comment'; ?>
-    </h3>
-     <?php endif; ?>
+        </h3>
+    <?php endif; ?>
     <?php
     $this->renderPartial('_comments', array(
-    'post' => $model,
-    'comments' => $model->comments,
+        'post' => $model,
+        'comments' => $model->comments,
     ));
     ?>
 
@@ -48,16 +67,16 @@ comments' : 'One comment'; ?>
 
     <h4>Leave a Comment</h4>
 
-    <?php if(Yii::app()->user->hasFlash('commentSubmitted')): ?>
-    <div class="flash-success">
-        <?php echo Yii::app()->user->getFlash('commentSubmitted'); ?>
-    </div>
+    <?php if (Yii::app()->user->hasFlash('commentSubmitted')): ?>
+        <div class="flash-success">
+            <?php echo Yii::app()->user->getFlash('commentSubmitted'); ?>
+        </div>
     <?php else: ?>
-    <?php
-    $this->renderPartial('/comment/_form', array(
-    'model' => $comment,
-    ));
-    ?>
+        <?php
+        $this->renderPartial('/comment/_form', array(
+            'model' => $comment,
+        ));
+        ?>
     <?php endif; ?>
 
 </div>

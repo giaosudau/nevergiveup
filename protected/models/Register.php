@@ -172,6 +172,7 @@ class Register extends CActiveRecord {
 	public function beforeSave() {
 		$this->created = date ( 'Y-m-d H:i:s' );
 		$this->password = md5 ( $this->password );
+                $this->password_repeat = md5 ( $this->password_repeat);
 		$this->active = 1;
 		$this->picture = '';
 		return true;

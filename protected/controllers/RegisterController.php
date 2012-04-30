@@ -25,15 +25,15 @@ class RegisterController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('index', 'view'),
+                'actions' => array('create', 'view'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update', 'newfriend'),
+                'actions' => array('update', 'newfriend'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
+                'actions' => array('index','admin', 'delete'),
                 'users' => array('admin'),
             ),
             array('deny', // deny all users
@@ -59,7 +59,6 @@ class RegisterController extends Controller {
     public function actionCreate() {
         $model = new Register();
 
-
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
@@ -71,6 +70,11 @@ class RegisterController extends Controller {
                 $friend_list = new FriendList();
                 $friend_list->user_id = $model->user_id;
                 $friend_list->save();
+                // create Profile
+                $profile = new Profile();
+                $profile->user_id = $model->user_id;
+                $profile->created = date("Y-m-d H:m:s");
+                $profile->save();
                 // redirect to home page
                 $this->redirect(array('view', 'id' => $model->user_id));
             }
@@ -125,8 +129,6 @@ class RegisterController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-
-
 
         $dataProvider = new CActiveDataProvider('Register');
         $this->render('index', array(
@@ -185,8 +187,8 @@ class RegisterController extends Controller {
         //$teamArray = CHtml::listData($command, 'friend_list_id', 'user_id');
         //echo $this->user_id;
         // $record = $getfriendlistid->read();
-        $idd= Register::model()->addFriend();
-        $friend->friend_list_id = $idd;
+        $idfriend= Register::model()->addFriend();
+        $friend->friend_list_id = $idfriend;
         return $friend->save();
 
         // Register::model()->addFriend($friend);

@@ -50,7 +50,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=social_network',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '123456',
+			'password' => 'amichan',
 			'charset' => 'utf8',
 		),
 		

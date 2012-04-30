@@ -22,9 +22,38 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'dob'); ?>
-		<?php echo $form->textField($model,'dob'); ?>
-		<?php echo $form->error($model,'dob'); ?>
+            <?php echo $form->labelEx($model,'dob'); ?>
+<?php //echo $form->textField($model,'dob');?>
+		<?php $this->widget('zii.widgets.jui.CJuiDatePicker',
+        array(
+            'model'=>$model,
+            'attribute'=>'dob',
+            'name'=>'dob',
+            'value'=>'',
+            'language'=>'',
+            'themeUrl' => Yii::app()->baseUrl.'/css/jui' ,
+            'theme'=>'base',
+            'cssFile'=>array('jquery-ui.css'),
+            'options'=>array(
+                'dateFormat'=>'yy-mm-dd',
+                'changeMonth'=>'true',
+                'changeYear'=>'true',
+                'showButtonPanel'=>'true',
+                'constrainInput'=>'false',
+                'duration'=>'fast',
+                'showAnim'=>'slide',
+            )
+           /* 'htmlOptions'=>array(
+                'style'=>'height:30px;
+                        background:#fff;
+                        color:#00a;
+                        font-weight:bold;
+                        font-size:0.9em;
+                        border: 1px solid #A80;
+                        padding-left: 4px;'
+            )*/
+
+        ));?>
 	</div>
 
 	<div class="row">
@@ -71,15 +100,11 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'hobbies'); ?>
-		<?php echo $form->textField($model,'hobbies',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textArea($model,'hobbies',array('size'=>150,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'hobbies'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'created'); ?>
-		<?php echo $form->textField($model,'created'); ?>
-		<?php echo $form->error($model,'created'); ?>
-	</div>
+
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

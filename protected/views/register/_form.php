@@ -1,11 +1,16 @@
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'register-form',
-	'enableAjaxValidation'=>false,
-)); ?>
+<?php
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+$form = $this->beginWidget ( 'CActiveForm', array (
+		'id' => 'register-form',
+		'enableAjaxValidation' => false 
+) );
+?>
+
+	<p class="note">
+		Fields with <span class="required">*</span> are required.
+	</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -20,6 +25,11 @@
 		<?php echo $form->passwordField($model,'password',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
+        <div class="row">
+		<?php echo $form->labelEx($model,'password_repeat'); ?>
+		<?php echo $form->passwordField($model,'password_repeat', array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'password_repeat'); ?>
+        </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'name_first'); ?>
@@ -40,21 +50,21 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'picture'); ?>
-		<?php echo $form->textField($model,'picture',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'picture'); ?>
+		<?php // echo $form->labelEx($model,'picture'); ?>
+		<?php // echo $form->textField($model,'picture',array('size'=>60,'maxlength'=>255)); ?>
+		<?php // echo $form->error($model,'picture'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'active'); ?>
-		<?php echo $form->textField($model,'active'); ?>
-		<?php echo $form->error($model,'active'); ?>
+		<?php // echo $form->labelEx($model,'active'); ?>
+		<?php // echo $form->textField($model,'active'); ?>
+		<?php // echo $form->error($model,'active'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'created'); ?>
-		<?php echo $form->textField($model,'created'); ?>
-		<?php echo $form->error($model,'created'); ?>
+		<?php //echo $form->labelEx($model,'created'); ?>
+		<?php //echo $form->textField($model,'created'); ?>
+		<?php //echo $form->error($model,'created'); ?>
 	</div>
 
 	<div class="row buttons">
@@ -63,4 +73,9 @@
 
 <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+</div>
+<!-- form -->
+
+
+
+

@@ -3,7 +3,7 @@
 
 	
 	<div class="author">
-		<?php echo $comment->friend_id; ?> says:
+		<b><?php echo $comment->friend_id; ?> </b> says:
 	</div>
 
 	<div class="time">
