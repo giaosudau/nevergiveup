@@ -1,0 +1,48 @@
+input[type=text]
+{
+    margin-top:8px;
+    font-size:18px;
+    color:#545454;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -border-radius: 2px;
+    display:none;
+    width:280px;
+
+}
+
+label
+{
+    float:left;
+    margin-top:8px;
+    font-size:18px;
+    color:#545454;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -border-radius: 2px;
+}
+
+.edit
+{
+    float:left;
+    background:url(../images/edit.png) no-repeat;
+    width:32px;
+    height:32px;
+    display:block;
+    cursor: pointer;
+    margin-left:10px;
+}
+
+.clear
+{
+    clear:both;
+    height:20px;
+}
+.status
+{
+    border: solid 1px #eeeeee;
+    padding: 20px;
+}
+.newStatus{
+    opacity: 0;
+}

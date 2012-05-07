@@ -1,0 +1,52 @@
+.Register{
+
+}
+.Login{
+font-family:"Courier New", Courier, monospace;
+margin:20px;
+background:url(../images/html_bg.jpg);
+
+}
+#banner{
+font-size:16px;
+font-style:oblique;
+font-weight:100;
+}
+body{
+color:#fff;
+background:url(../images/body_bg.jpg);
+font-size:18px;
+}
+#lbbanner{
+font-family:"Courier New", Courier, monospace;
+font-size:24px;
+font-style:oblique;
+color:#fff;
+}
+#btnRegister{
+background: #21BBE1;
+border-radius: 5px;
+color: white;
+font-weight: bold;
+margin:10px;
+padding:5px 10px 5px 10px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:18px;
+}
+#btnLogin{
+background: #21BBE1;
+border-radius: 5px;
+color: white;
+font-weight: bold;
+margin:10px;
+padding:5px 10px 5px 10px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:18px;
+}
+.Register{
+}
+#lbwhere{
+font-family:"Courier New", Courier, monospace;
+font-size:24px;
+
+}

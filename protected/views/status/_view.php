@@ -1,3 +1,6 @@
+
+
+<p> 00000000000000----------------000000000000000</p>
 <div class="status">
     <div class="title">
 		<?php 
@@ -8,10 +11,10 @@
         <b><?php echo 'Hello: ' ?>:</b>
 	<?php echo $data->user['username'];  ?>
 	<br />
-<!--	<b><?php 
+	<b><?php 
         echo CHtml::encode($data->getAttributeLabel('status_id')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->status_id), array('view', 'id'=>$data->status_id)); ?>
-	<br />-->
+        <br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('message')); ?>:</b>
 	<?php echo CHtml::encode($data->message); ?>
@@ -21,7 +24,7 @@
 	<?php echo CHtml::encode($data->created); ?>
 	<br />
 	
-	<?php $this->renderPartial('_thumbupdown',array('status_id' =>$data->status_id))?>
+	<?php //$this->renderPartial('_thumbupdown',array('status_id' =>$data->status_id))?>
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('thumbs_up')); ?>:</b>
 	<?php echo CHtml::encode($data->thumbs_up); ?>

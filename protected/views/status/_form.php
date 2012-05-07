@@ -15,36 +15,6 @@
 		<?php echo $form->error($model,'message'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'created'); ?>
-		<?php echo $form->textField($model,'created'); ?>
-		<?php echo $form->error($model,'created'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'thumbs_up'); ?>
-		<?php echo $form->textField($model,'thumbs_up'); ?>
-		<?php echo $form->error($model,'thumbs_up'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'thumbs_down'); ?>
-		<?php echo $form->textField($model,'thumbs_down'); ?>
-		<?php echo $form->error($model,'thumbs_down'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'reply'); ?>
-		<?php echo $form->textField($model,'reply',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'reply'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'user_id'); ?>
-		<?php echo $form->textField($model,'user_id'); ?>
-		<?php echo $form->error($model,'user_id'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

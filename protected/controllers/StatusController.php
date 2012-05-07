@@ -45,6 +45,7 @@ class StatusController extends Controller {
                 'actions' => array(
                     'create',
                     'update',
+                    "ajaxcreate",
                     'status_thumbup'
                 ),
                 'users' => array(
@@ -89,8 +90,8 @@ class StatusController extends Controller {
         $post = $this->loadModel($id);
         $comment = $this->newComment($post);
         $like = 'Like';
-        $record = count(ThumbUpDown::model()->findAllByAttributes(array('status_id'=>$id, 'friend_id' => Yii::app()->user->id)))>0;
-        if($record){
+        $record = count(ThumbUpDown::model()->findAllByAttributes(array('status_id' => $id, 'friend_id' => Yii::app()->user->id))) > 0;
+        if ($record) {
             $like = 'Unlike';
         }
 
@@ -108,6 +109,27 @@ class StatusController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view'
      * page.
      */
+    public function actionAjaxCreate() {
+        $model = new Status ();
+        if (isset($_POST['status'])) {
+            $model->message = $_POST['status'];
+            $model->created = date("Y-m-d H:m:s");
+            $model->user_id = Yii::app()->user->id;
+            $model->thumbs_down = $model->thumbs_up = 0;
+            $user ='hhhhhhh'; //Register::model()->findByPk(array('status_id' =>$model->user_id))->email;
+            if ($model->save())
+                echo '<div class="load_status">
+                            <div class="status_img"><img src="blankSilhouette.png" /></div>
+                            <div class="status_text"><a href="#" class="blue"><?PHP echo $user; ?></a>
+                            <p class="text">' . $model->message . '</p>
+                            <div class="date">' .$model->created . ' &middot; <a href="#" class="light_blue">
+                            Like</a> &middot; <a href="#" class="light_blue">Comment</a></div>
+                            </div>
+                            <div class="clear"></div>
+                            </div>';
+        }
+    }
+
     public function actionCreate() {
         $model = new Status ();
 
@@ -188,8 +210,10 @@ class StatusController extends Controller {
      */
     public function actionIndex() {
         $dataProvider = new CActiveDataProvider('Status');
-        $this->render('index', array(
-            'dataProvider' => $dataProvider
+        // order status
+        $dataProvider->sort->defaultOrder = 'status_id DESC';
+        $this->render('status', array(
+               'dataProvider' => $dataProvider
         ));
     }
 
@@ -253,16 +277,16 @@ class StatusController extends Controller {
 
     public function actionStatus_thumbup() {
         $status_id = $_POST['id'];
-        $status = $this->loadModel($status_id);  
-        if($_POST['name']=='up'){
+        $status = $this->loadModel($status_id);
+        if ($_POST['name'] == 'up') {
             $status->thumbsUpKick($status_id);
         }
 //        if($_POST['name']=='down'){
 //            $status->thumbsDownKick($status_id);
 //        }
-        
+
         $thumbs = $status->getThumbUp($status->status_id);
-        echo '<b> Liked: </b>' . $thumbs['up']. '<b> Dislike </b>' . $thumbs['down'];
+        echo '<b> Liked: </b>' . $thumbs['up'] . '<b> Dislike </b>' . $thumbs['down'];
 
 
 //		$result = array (
