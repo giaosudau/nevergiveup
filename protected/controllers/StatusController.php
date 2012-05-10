@@ -96,8 +96,8 @@ class StatusController extends Controller {
         }
 
         //$post->thumbUp ( $id );
-        //echo $post->getThumbUp ( $id );
-        $this->render('view', array(
+        //echo $post->getThumbUp ( $id ); 
+       $this->render('view', array(
             'model' => $post,
             'comment' => $comment,
             'like' => $like
@@ -118,7 +118,7 @@ class StatusController extends Controller {
             $model->thumbs_down = $model->thumbs_up = 0;
             $user ='hhhhhhh'; //Register::model()->findByPk(array('status_id' =>$model->user_id))->email;
             if ($model->save())
-                echo '<div class="load_status">
+               /* echo '<div class="load_status">
                             <div class="status_img"><img src="blankSilhouette.png" /></div>
                             <div class="status_text"><a href="#" class="blue"><?PHP echo $user; ?></a>
                             <p class="text">' . $model->message . '</p>
@@ -126,7 +126,52 @@ class StatusController extends Controller {
                             Like</a> &middot; <a href="#" class="light_blue">Comment</a></div>
                             </div>
                             <div class="clear"></div>
-                            </div>';
+                            </div>
+                            
+<div class="comment_box" id="c6">
+<form method="post" action="" name="6">
+<textarea class="text_area" name="comment_value" id="textarea6">
+</textarea><br />
+<input type="button" value=" Comment " class="comment_submit" id="6"/>
+</form>
+</div>
+
+';
+                *
+                */
+               echo '
+<div class="stbody">
+    <div class="stimg">
+        2 Image Part
+    </div>
+    <div class="sttext">
+        3 Text Part
+    </div>
+
+    <a href="#"id ="comment_link">Comment</a>
+    <span class="icodot"> 5 comment</span>
+    <span class="likelink"><a  href="" isliked="0">Like</a> 10 liked</span>
+
+</div>     
+
+
+
+<div id="box_comment" class="bxcomment">
+    <div id="buser_2870117628" class="rowcomment">
+        <div id="hint" class="hint">Enter Comment</div>
+    </div>
+    <div id="comment_id" class="rowcomment" >
+        <div class="rowcommentlt">
+            <a>
+                <img width="40" height="40" src="http://3.1.s50.avatar.zdn.vn/avatar_files/3/c/d/8/giaosudau_50_3.jpg">
+            </a>
+            <textarea id="txtComment"></textarea>
+        </div>
+        
+           
+
+    </div>
+</div>';
         }
     }
 
@@ -211,9 +256,12 @@ class StatusController extends Controller {
     public function actionIndex() {
         $dataProvider = new CActiveDataProvider('Status');
         // order status
+        
         $dataProvider->sort->defaultOrder = 'status_id DESC';
+        
         $this->render('status', array(
-               'dataProvider' => $dataProvider
+               'dataProvider' => $dataProvider,
+        //  'model' => $model
         ));
     }
 
@@ -300,3 +348,6 @@ class StatusController extends Controller {
     }
 
 }
+
+
+?>

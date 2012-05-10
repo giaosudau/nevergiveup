@@ -173,4 +173,8 @@ class ProfileController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        public function actionImageUpload(){
+            $valids_format = array('jpg','png','bmp');
+        }
 }

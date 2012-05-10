@@ -25,15 +25,15 @@ class RegisterController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('create', 'view'),
+                'actions' => array('create', 'view','uploadimage'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('update', 'newfriend'),
+                'actions' => array('update', 'newfriend','uploadimage'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('index','admin', 'delete'),
+                'actions' => array('index', 'admin', 'delete'),
                 'users' => array('admin'),
             ),
             array('deny', // deny all users
@@ -102,7 +102,7 @@ class RegisterController extends Controller {
                 $this->redirect(array('view', 'id' => $model->user_id));
         }
 
-        $this->render('update', array(
+        $this->render('uploadImage', array(
             'model' => $model,
         ));
     }
@@ -139,6 +139,43 @@ class RegisterController extends Controller {
     /**
      * Manages all models.
      */
+    public function actionUploadImage() {
+        $valid_formats = array('jpg', 'png', 'jpeg', 'bmp');
+        $path = $baseUrl = Yii::app()->baseUrl .'/images/uploads/';
+        $user_id = Yii::app()->user->id;
+        
+        if (isset($_POST) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+            $name = $_FILES['photoimg']['name'];
+            $size = $_FILES['photoimg']['size'];
+            if (strlen($name)) {
+                list($txt, $ext) = explode(".", $name);
+            }
+            if (in_array($ext, $valid_formats)) {
+                if ($size < (1024 * 1024 * 4)) {
+                    $actual_image_name = time() . $user_id . "." . $ext;
+                    $tmp = $_FILES['photoimg']['tmp_name'];                    
+                    if(move_uploaded_file($tmp, 'images/uploads/'.$actual_image_name)){
+                        $user = $this->loadModel(2);
+                        $user->picture = $actual_image_name;
+                        $user->active = 22;
+                        $user->save();
+                        
+                        echo  "<img src='../../../images/uploads/".$actual_image_name."' class='preview'>";
+                        echo $user->picture;
+                        $ss = $this->loadModel(2);
+                        echo $ss->picture;
+                    }
+                    else echo "Failed"; 
+                }
+                else echo "File Size Must Max 4MB"; 
+            }
+            else echo "Invalid Format";
+        }
+        else echo "Please Select Image";
+        
+        
+    }
+
     public function actionAdmin() {
         $model = new Register('search');
         $model->unsetAttributes();  // clear any default values
@@ -181,13 +218,11 @@ class RegisterController extends Controller {
         $friend->created = date("Y-m-d H:m:s");
         //$command = FriendList::model()->find('friend_list_id=' . Yii::app()->user->id);
         //$command = Yii::app()->db->createCommand('SELECT friend_list_id FROM friend_list WHERE user_id=' . Yii::app()->user->id);
-       
-        
         // $getfriendlistid = $command->query();
         //$teamArray = CHtml::listData($command, 'friend_list_id', 'user_id');
         //echo $this->user_id;
         // $record = $getfriendlistid->read();
-        $idfriend= Register::model()->addFriend();
+        $idfriend = Register::model()->addFriend();
         $friend->friend_list_id = $idfriend;
         return $friend->save();
 
