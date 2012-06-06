@@ -1,0 +1,48 @@
+
+
+<% for(var i=0; i<request.length; i++) { %>
+<div class="zme_notify">
+                                            <span class="img" id="nfra_49699526" 
+                                                  rel="ZMEA_49699526?id=1&amp;l=1&amp;size=50&amp;width=42&amp;height=42" 
+                                                  ref_f="1">
+                                                <a href="/nevergiveup/index.php/profile/<%= request[i].user_id %>" 
+                                                   id="nfra_49699526L">
+                                                    <img width="42" height="42" 
+                                                         src="http://0.1.s50.avatar.zdn.vn/avatar_files/0/7/2/d/tramyeudoi.hocthatgioi_50_60.jpg" 
+                                                         id="wganfra_49699526" >
+                                                </a>
+                                            </span>
+                                            <div class="zme-notify-item-cont">
+                                                <p class="zme-notify-fr-name">
+                                                    <strong>
+                                                        <span class="zme-notify-fr-name" 
+                                                              id="nfrd_49699526" >
+                                                            <a title="<%= request[i].name %>" 
+                                                               href="/nevergiveup/index.php/profile/<%= request[i].user_id %>" 
+                                                               id="wgdnfrd_49699526">
+                                                                <%= request[i].name %>
+                                                            </a>
+                                                        </span>
+                                                    </strong>
+                                                </p>
+                                                <div class="fr_msg">
+                                                    <a onclick="return false;" id="decline<%= request[i].user_id %>" 
+                                                       class="btn_L5 fr deny_btn" href="#">
+                                                        <em>Decline</em>
+                                                    </a>
+                                                    <a onclick="return false;" id="accept<%= request[i].user_id %>" 
+                                                       class="btn_L3 fr accept_btn" href="#">
+                                                        <em>Accept</em>
+                                                    </a>
+                                                    <p class="notif_invite_msg">2 mutual friends</p>
+                                                    <p class="zme-notify-time">1:25 AM</p>
+                                                    <div class="clr"></div>
+                                                </div>                                                
+                                            </div>
+                                            <div class="clr"></div>                                            
+                                        </div>    
+
+<!--                                        <p class="notif_noitem">Bạn không có lời mời kết bạn nào</p>-->
+                                       
+
+  <% } %>

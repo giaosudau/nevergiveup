@@ -1,0 +1,216 @@
+#header{width:100%;position: fixed;top:0;left:0;z-index: 899;margin:0 auto}
+*html #header{position:absolute;bottom:auto;top:expression(eval(document.documentElement.scrollTop));}
+.zingheader *{margin:0;padding:0;list-style:none;border:0 none;outline:none}
+.zingheader{width:100%;font-size:11px;font-family:Tahoma,Helvetica,Verdana,Arial;color:#fff;text-decoration:none;}
+.zingmain{width:980px;margin:0 auto;position:relative;}
+.zingtop,.zingcomponent,ul.zingtab li a.selected{background-image:url(../images/header/zing_imgsprt-1.03.gif);background-repeat:repeat-x;}
+.zingsearch,.zingbtnsearch, .zingicohome a,.zmp3_upload_btn,.quikupdatestt_btn{background-image:url(../images/header/zing_imgsprt-1.03.gif);background-repeat:no-repeat;}
+.zingtop{background-position:0 -96px;}
+.zingtop,.zinglogo a,.zingsearch,.zingborder,.zingborderinner,.zingfamily{height:35px;}
+.zingheader,.zingtop,.zingcomponent{min-width:980px;}
+/* Logo */
+.zinglogo{width:145px;float:left;overflow:hidden;}
+.zinglogo a{display:block;background-image:url(../images/header/zing_logos-1.03.gif);background-repeat:no-repeat;width:145px;}
+  .zhome_header .zinglogo a{background-position:0 0}
+  .zme_header .zinglogo a{background-position:0 -35px;}
+  .zmp3_header .zinglogo a{background-position:0 -70px}
+  .znews_header .zinglogo a{background-position:0 -105px}
+  .zlive_header .zinglogo a{background-position:0 -140px;}
+.zingsearch{width:378px;background-position:0 0;float:left;}
+input.zingbxsearch{border:0;color:#646464;font:normal 12px Tahoma, Arial;width:328px;height:24px;margin:5px 3px;float:left;padding:0 5px 0;line-height:26px;}
+@media screen and (-webkit-min-device-pixel-ratio:0) {input.zingbxsearch{line-height:normal;}}
+
+/* Color of search button */
+.zingbtnsearch{width:33px;height:28px;border:0;float:left;text-indent:-9999px;cursor:pointer;background-color:transparent;-webkit-appearance:none;overflow:hidden;outline:none;padding:0;margin:3px 0 0;border-radius:0}
+  .zhome_header .zingbtnsearch{background-position:-34px -48px} /* on Zing Home */
+  .zme_header .zingbtnsearch{background-position:0 -48px} /* on Zing Me */
+  .znews_header .zingbtnsearch{background-position:-68px -48px;} /* on Zing News */
+  .zmp3_header .zingbtnsearch{background-position:-102px -48px} /* on Zing Mp3 */
+  .zlive_header .zingbtnsearch{background-position:-136px -48px} /* on Zing Live */
+
+/* Other branch sites */
+.zingfamily{width:180px;float:right;line-height:35px;text-align:right;}
+  ul.zingtab{float:right}
+  ul.zingtab li{padding:0 3px;list-style:none;float:left;}
+  ul.zingtab li a{color:#fff;text-decoration:none;font-size:13px;font-weight:bold;white-space:nowrap;float:left;}
+  ul.zingtab li a span{display:block;padding:0 1px;}
+  ul.zingtab li a strong{padding:0 8px;display:block;}
+  ul.zingtab li a:hover{text-decoration:underline;color:#fff}
+  ul.zingtab li a.selected{border-left:1px solid #3c3d3e;border-right:1px solid #3c3d3e;background-position:0 -135px;}
+  ul.zingtab li a.selected span{border-left:1px solid #000;border-right:1px solid #000;padding:0}
+  ul.zingtab li a.selected strong{border-left:1px solid #606060;border-right:1px solid #606060;padding:0 7px;}
+
+/* User Account area */
+.zingarrowuser,.ntbtn{background-image:url(../images/header/zinguser_icnsprt-1.03.gif);background-repeat:no-repeat;}
+.zinguser *{margin:0;padding:0;list-style:none;border:0 none;outline:none;}
+.zinguser{width:267px;float:right;font-family:Tahoma,Arial;font-size:11px; text-align:right;}
+.zingpersonal{width:110px;height:34px;float:right;background-position:0 -63px;display:block;cursor:pointer;position:relative;}
+.zingpersonal .zingborder{display:block;}
+.zingpersonal .zingborderinner{padding:0 5px;display:block; text-align:left;}
+.zingpersonal .zingborderinner a,.zingpersonal .zingborderinner a:hover{text-decoration:none;}
+.zingpersonal .zingavtuser{width:20px;height:20px;border:1px solid #9c9c9c;float:left;margin-right:8px;margin-top:6px;padding:1px;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;}
+.zingpersonal .zingavtuser img{width:20px;height:20px;}
+.zingpersonal .zingnameuser{width:55px;line-height:35px;color:#e6e6e6;float:left;overflow:hidden;display:block}
+.zingpersonal .zingarrowuser{width:12px;height:8px;background-position:-94px 0;display:inline;margin-top:14px;float:right;}
+.zingpersonal .zingborder.selected{border-left:2px solid #355d98;border-right:2px solid #355d98;background-color:#fff;}
+.zingpersonal .zingborder.selected .zingborderinner{padding:0 3px;}
+.zingpersonal .zingborder.selected .zingnameuser{color:#343434;}
+.zingpersonal .zingborder.selected .zingavtuser{background-color:#333;border:1px solid #fff;padding:1px}
+.zingpersonal .zingborder.selected .zingarrowuser{background-position:-105px 0;}
+.zingaccuser{float:right;position:relative;padding-top:3px;padding-right:10px;}
+		.ntbtn{margin:5px 0 0 10px;width:27px;height:24px;display:inline;cursor:pointer;float:left;position:relative;outline:none}
+		.ntbtn.zingnotify{background-position:0 0;}
+    .ntbtn.zingnotify.hover,.ntbtn.zingnotify:hover{background-position:0 -34px;}
+    .ntbtn.zingnotify.selected{background-position:0 -68px;}
+    .ntbtn.zingmessage{background-position:-31px 0}
+    .ntbtn.zingmessage.hover,.ntbtn.zingmessage:hover{background-position:-31px -34px;}
+    .ntbtn.zingmessage.selected{background-position: -31px -68px;}
+		.ntbtn.zingmakefrd{background-position:-62px 0;}
+    .ntbtn.zingmakefrd.hover,.ntbtn.zingmakefrd:hover{background-position:-62px -34px;}
+    .ntbtn.zingmakefrd.selected{background-position:-62px -68px;}
+.zingaccuser .zingcounter{background:#ff0100;color:#fff;font-size:10px;font-weight:bold;padding:0 2px 1px 2px;cursor:pointer;position:absolute;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;margin:0;white-space:nowrap;top:-2px;right:-6px;line-height:14px;text-align:center;min-width:14px;_width:14px;}
+
+/* [DROPDOWNLIST:Notify-list, Personal-Account-box] */
+.boxshadow_popup{position:absolute;width:371px;color:#333;/* Default width */}
+.popup_edge_shadow{padding-right:8px;background:url(../images/header/notif_shadow_edge.png) right repeat-y;}
+.notif_boxshadow{margin-left:3px;height:8px;}
+.notif_boxshadow .ntifboxshd_left,.notif_boxshadow .ntifboxshd_right{height:8px;width:8px;font-size:0;}
+.notif_boxshadow .ntifboxshd_left{background:url(../images/header/notif_shadow_botleft.png) left bottom no-repeat;_margin-right:-3px;}
+.notif_boxshadow .ntifboxshd_right{background:url(../images/header/notif_shadow_botright.png) right bottom no-repeat;_margin-left:-3px;}
+.notif_boxshadow .ntifboxshd_center{background:url(../images/header/notif_shadow_botloop.png) repeat-x;height:8px;margin:0 8px 0 8px;_margin:0;font-size:0;}
+.popup_border{text-align:left;border:2px solid #01548d;background:#fff;line-height:16px;position:relative;!height:1%}
+.overlap{height:2px;line-height:2px;overflow:hidden;position:absolute;top:-2px;z-index:600;background:#fff;right:0;}
+.overlap.notify{left:71px;}
+.overlap.message{left:108px;}
+.overlap.friend{left:145px;}
+/* Fix ie6*/
+*html .boxshadow_popup{padding:0 3px 3px 0;background:#ccc;width:360px;/*Default width */}
+*html .popup_edge_shadow{padding:0;background:#ccc;}
+*html .notif_boxshadow{display:none;}
+*html .overlap{top:0;right:4px;}
+
+/* Notification activities */
+.zingaccuser .overlap{width:23px;}
+.zingaccuser .boxshadow_popup{top:24px;width:300px;cursor:default;z-index:600;}
+.zingaccuser .boxshadow_popup.notify{right:-202px;}
+.zingaccuser .boxshadow_popup.message{right:-165px;}
+.zingaccuser .boxshadow_popup.friend{right:-128px;}
+.ntpopup_head{color:#333;font-size:12px;padding:5px 8px;border-bottom:1px solid #dee5ef;}
+.zme_notify{padding:5px;border-bottom:1px solid #dee5ef;border-top:1px solid #fff;color:#333;display:block;text-decoration:none;height:1%}
+.zme_notify:hover{background:url(../images/header/notif_hover.jpg) repeat-x 0 0;border-top:1px solid #c8d4e5;border-bottom:1px solid #c8d4e5;cursor:pointer;text-decoration:none;}
+.zme_notify .zme-notify-fr-name{color:#476DA4;font-weight:bold;}
+.zme_notify .zme-notify-fr-name a{color:#476DA4;text-decoration:none;}
+.zme_notify .zme-notify-fr-name a:hover{color:#476DA4;text-decoration:underline}
+.zme_notify .grey{color:#888;}
+.zme_notify .contnotify{overflow:hidden;margin-top:-3px;margin-left:18px;display:block;color:#333;}
+.zme_notify .zme-notify-item-cont{overflow:hidden;margin-top:-3px;margin-left:50px;display:block;_height:42px;}
+.zme_notify .zme-notify-item-cont .notificon_fam{margin-right:2px;vertical-align:middle;}
+.zme-notify-bottom{padding:5px;height:22px;clear:both;background-color:#f0f3f7;border-top:1px solid #fff;line-height:normal;}
+.zme-notify-bottom .btn_L3{float:right;margin-right:0 !Important}
+.zme-notify-bottom .notif_bot_left{padding-top:3px;float:left;}
+.zme-notify-bottom .notif_bot_left a{font-weight:bold;margin-right:8px;}
+.zme-notify-bottom .notif_bot_left a{color:#476DA4;text-decoration:none;}
+.zme-notify-bottom .notif_bot_left a:hover{color:#476DA4;text-decoration:underline;}
+.zme-notify-bottom .notif_bot_left .lk_bullet{font-size:13px;line-height:12px;color:#476DA4;}
+.notificon{width:13px;height:12px;float:left;border:none;background-image:url(http://css.me.zdn.vn/v3/images/zme_icons16x16-1.16.gif);display:inline-block;font-size:0;margin-right:5px;}
+.notifbox_cont .btn_L5 em,.notifbox_cont .btn_L3 em{font-size:11px;}
+.zingaccuser .notif_noitem{border-bottom:1px solid #DEE5EF;padding:10px 8px;text-align:center;}
+.zingaccuser .notif_loading{padding:10px;text-align:center;text-indent:-99999em;height:12px;background: url(../images/header/loader.gif) no-repeat center center;border-bottom:1px solid #DEE5EF}
+*html .zingaccuser .boxshadow_popup{right:-5px;width:290px;}
+*html .zingaccuser .overlap{top:0;right:4px;}
+    /* Private Message */
+    .pmlist .zme_notify .img{border:none;width:42px;height:42px;float:left;}
+    .pmlist .zme_notify .img img{width:42px;height:42px;}
+    .pmlist .zme_notify .pmtxt{white-space:nowrap;width:100%;overflow:hidden;}
+
+    /* Friend Invitation */
+    .frdlist .zme_notify:hover{background:none;border-bottom:1px solid #dee5ef;border-top:1px solid #fff;color:#333;}
+    .frdlist .zme_notify .img{border:none;width:42px;height:42px;float:left;}
+    .frdlist .zme_notify .img img{width:42px;height:42px;}
+    .frdlist .zme-notify-fr-name{font-size:12px;overflow:hidden;white-space:nowrap;padding-bottom:3px;width:100%}
+    .frdlist .zme-notify-time,.notif_invite_msg{width:100px;}
+    .frdlist .zme-notify-time{color:#888;}
+    .frdlist .zme-notify-item:hover{background:none;border-bottom:1px solid #dee5ef;border-top:1px solid #fff;}
+    .notif_invite_msg{line-height:16px;height:16px;overflow:hidden;display:block;}
+    .zinguser .btn_L5{font-weight:bold;font-size:12px;background-position:0 -332px;color:#555;border:1px solid #888;background-image:url(http://css.me.zdn.vn/v3/images/btn_sprite.jpg);text-decoration:none;!cursor:pointer;vertical-align:bottom;padding-left:8px;height:20px;line-height:19px;display:inline-block;margin-right:0;margin-left:5px;*margin-left:1px;}
+    .zinguser .btn_L5 em{display:inline-block;font-style:normal;padding-right:8px;height:20px;!cursor:pointer;}
+    .zinguser .btn_L5:hover{color:#3784b2;text-decoration:none;border:1px solid #3784b2;}
+    .accept_btn, .deny_btn{margin-top:10px;float:right;}
+    .deny_btn{margin-left:3px;}
+
+/* Not logged in */
+.zingtxtuser{line-height:34px;text-align:right;color:#fff;}
+.zingtxtuser a,.zingtxtuser a:hover{color:#fff;text-decoration:none;}
+.zingtxtuser a:hover strong{text-decoration:underline;}
+  .zhome_header .zingtxtuser a strong,.zhome_header .zingtxtuser a:hover strong{color:#5f8cc8;}
+  .znews_header .zingtxtuser a strong,.znews_header .zingtxtuser a:hover strong{color:#F37B24;}
+
+/* Zing Me - Account box */
+.zinguser .btn_L3{padding-left:8px;height:20px;line-height:19px;display:inline-block;*margin-right:3px;font-weight:bold;font-size:12px;border:1px solid #1a5b99;background-color:#56a8db;background-position:0 0;color:#fff !important;}
+.zinguser .btn_L3 em{display:inline-block;font-style:normal;padding-right:8px;height:20px;!cursor:pointer;}
+.zinguser .btn_L3:hover{border:1px solid #002376;background-color:#1c8acf;background-position:0 -20px;}
+.zinguser .btn_L3,.zinguser .btn_L3:hover{background-image:url(http://css.me.zdn.vn/v3/images/btn_sprite.jpg);text-decoration:none;!cursor:pointer;vertical-align:bottom;}
+.zingpersonal .boxshadow_popup{right:-8px;top:32px;width:320px;z-index:1100;}
+.zingpersonal .overlap{width:106px;}
+.zingpersonal .popup_inner_cont{padding:10px;}
+.zingpersonal .popup_inner_cont a{color:#476DA4;text-decoration:none;}
+.zingpersonal .popup_inner_cont a:hover{text-decoration:underline;color:#01548d;}
+.zingpersonal .thumb_avatar{float:left;margin-right:10px}
+.zingpersonal .thumb_avatar img{width:130px;height:130px;}
+.zingpersonal .acc_user_menu{float:left;list-style:none;margin-top:-3px;}
+.zingpersonal .acc_user_menu li{list-style:none;display:block;font-size:12px;padding:2px 0;height:18px;line-height:15px;}
+.zingpersonal .acc_user_menu li .icn,.zingpersonal .note-l,.zingpersonal .note-r{height:16px;vertical-align:middle;width:16px;display:inline-block;font-size:0;margin-right:5px;background-image: url(../images/header/acc_icnsprt.gif);}
+  .icn_profile{background-position:0 0;}
+  .icn_privacy{background-position:0 -32px;}
+  .icn_editinfo{background-position:0 -16px;}
+  .icn_logout{background-position:0 -112px;}
+  .icn_zmewallet{background-position:0 -64px}
+  .icn_infoboard{background-position:0 -48px;}
+  .icn_friends{background-position:0 -80px;}
+  .icn_changepass{background-position:0 -96px;}
+.zingpersonal .stt_newupdate{font-size:12px;clear:both;border-top:1px solid #d5dce2;padding:3px 10px;display:block;margin:5px -10px 0;*position:relative;}
+.zingpersonal .stt_date{color:#888;font-size:11px;}
+.zingpersonal .quik_update_sttbox{padding:10px 10px;margin:-5px 0 0;background-color:#f0f3f8;!height:1%}
+.zingpersonal .quik_update_sttbox .qikstt_txtbox{border:1px solid #acb5c4;background-color:#fff;color:#888;font-size:12px;padding:1px 5px;width:220px;height:19px;line-height:16px;font-family:Tahoma,Arial;}
+.zingpersonal .quik_update_sttbox .quikupdatestt_btn{width:50px;height:22px;display:block;text-indent:-9999em;background-position:-208px -58px;}
+.zingpersonal .quik_update_sttbox .quikupdatestt_btn:hover{background-position:-258px -58px;}
+.zingpersonal .note-l{background-position:0 -128px;height:16px;margin:0 2px;width:16px;}
+.zingpersonal .note-r{background-position:0 -144px;height:16px;margin:0 2px;width:16px;}
+
+/* [MENU BAR] */
+.zingcomponent{background-position:0 -174px;height:29px;border-bottom:1px solid #dadada;}
+.zingicohome a{background-position:-174px -48px;width:25px;height:25px;text-indent:-9999px;display:block;cursor:pointer;float:left;margin:2px 3px 0 0;}
+ul.zingmenuchild{float:left;}
+ul.zingmenuchild li{line-height:29px;font-size:12px;font-weight:bold;float:left;list-style:none;display:block;}
+ul.zingmenuchild li a{color:#444;text-decoration:none;display:block;padding:0 8px;}
+ul.zingmenuchild li a:hover, ul.zingmenuchild li:hover>a,ul.zingmenuchild li a.selected{background:#fff;border-left:1px solid #dadada;border-right:1px solid #dadada;text-decoration:none;padding:0 7px;}
+
+/* Sub menu Single-column */
+ul.zingmenuchild .zingsubmenu{background-color:#fff;border:1px solid #dbdbdb;position:absolute;padding:0;overflow:auto;max-width:200px;min-width:160px;z-index:100;padding:1px;_width:200px;line-height:29px;}
+ul.zingmenuchild .zingsubmenu li{display:block;float:none;font-weight:normal;line-height:16px;_height:1%;vertical-align:bottom;border-top:1px solid #e2e2e2;}
+ul.zingmenuchild .zingsubmenu li:first-child{border-top:0 none;}
+ul.zingmenuchild .zingsubmenu li a{border-left:0 none;border-right:0 none;padding:5px;}
+ul.zingmenuchild .zingsubmenu li a:hover{background-image:url(../images/header/zing_imgsprt-1.03.gif);background-repeat:repeat-x;padding:5px;color:#fff;font-weight:bold;}
+/* Sub menu multi-column */
+ul.zingmenuchild .zingsubmenu_multicol{background-color:#fff;border:1px solid #dbdbdb;position:absolute;padding:0;overflow:auto;z-index:100;padding:1px;}
+  .subcol{float:left;border-left:1px solid #ddd;min-height:214px;_height:214px;overflow:hidden;}
+  .subcol.first-child,.subcol:first-child{border-left:none 0;}
+  .subcol h2{text-align:center;padding:10px 0;font-size:12px;line-height:normal;color:#333333;border-bottom:1px solid #ebebeb;background-color:#f5f5f5}
+  .subcol ul{min-width:150px;overflow:hidden;}
+  .subcol ul li{display:block;float:none;border-bottom:1px solid #ebebeb;line-height:29px;}
+  .subcol ul li a{font-weight:normal;}
+  .subcol ul li:last-child{border-bottom:0 none;}
+  .subcol ul li a:hover{font-weight:bold;color:#fff;background-image:url(../images/header/zing_imgsprt-1.03.gif);background-repeat:repeat-x;border:0 none;padding:0 8px;}
+  .subcol .subinner_item li{float:left;display:inline;border-right:1px solid #ebebeb;}
+
+/* Menu action Show/Hide */
+ul.zingmenuchild .zingsubmenu{display:none}
+ul.zingmenuchild li:hover .zingsubmenu{display:block;}
+ul.zingsubmenu,.zingsubmenu_multicol{display:none}
+ul.zingmenuchild li:hover ul.zingsubmenu, ul.zingmenuchild li.iehover ul,ul.zingmenuchild li:hover .zingsubmenu_multicol{display:block;}
+
+/* Sub menu item on hover */
+.znews_header .zingsubmenu li a:hover{background-position:0 -235px;background-color:#fd7b04;}
+.zmp3_header .subcol ul li a:hover,.zmp3_header .zingsubmenu li a:hover{background-position:0 -206px;background-color:#673287;}
+
+/* [SPECIFIC STYLES] */

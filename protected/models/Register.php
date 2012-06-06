@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table 'user':
  * @property integer $user_id
- * @property string $username
+
  * @property string $password
  * @property string $name_first
  * @property string $name_last
@@ -47,7 +47,7 @@ class Register extends CActiveRecord {
 				// array('username, password, name_first, name_last, email,
 				// active, created', 'required'),
 				array (
-						'username, password,password_repeat, name_first, name_last, email',
+						'password,name_first, name_last, email',
 						'required' 
 				),
 				array (
@@ -56,7 +56,7 @@ class Register extends CActiveRecord {
 						'integerOnly' => true 
 				),
 				array (
-						'username, password, name_first, name_last',
+						'password, name_first, name_last',
 						'length',
 						'max' => 45 
 				),
@@ -70,13 +70,13 @@ class Register extends CActiveRecord {
 						'length',
 						'max' => 255 
 				),
-                                array('email, username','unique'),
+                                array('email','unique'),
                                 array('password','compare'),
-                                array('password_repeat','safe'),
+                                 array('password_repeat','safe'),
 				// The following rule is used by search().
 				// Please remove those attributes that should not be searched.
 				array (
-						'username, name_first, name_last, email',
+						'name_first, name_last, email',
 						'safe',
 						'on' => 'search' 
 				) 
@@ -126,7 +126,7 @@ class Register extends CActiveRecord {
 	public function attributeLabels() {
 		return array (
 				'user_id' => 'User',
-				'username' => 'Username',
+				// 'username' => 'Username',
 				'password' => 'Password',
                                 'password_repeat' =>'Password Repeat', 
 				'name_first' => 'Name First',
@@ -151,7 +151,7 @@ class Register extends CActiveRecord {
 		$criteria = new CDbCriteria ();
 		
 		// $criteria->compare('user_id', $this->user_id);
-		$criteria->compare ( 'username', $this->username, true );
+		// $criteria->compare ( 'username', $this->username, true );
 		// $criteria->compare('password', $this->password, true);
 		$criteria->compare ( 'name_first', $this->name_first, true );
 		$criteria->compare ( 'name_last', $this->name_last, true );

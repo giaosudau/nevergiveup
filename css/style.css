@@ -48,5 +48,59 @@ font-size:18px;
 #lbwhere{
 font-family:"Courier New", Courier, monospace;
 font-size:24px;
+}
 
+
+.btn_regis input {
+    background: none repeat scroll 0 0 green;
+    border: medium none;
+    color: white;
+    cursor: pointer;
+    height: 26px;
+    width: 94px;
+}
+
+
+div.field_container input {
+    font-size: 16px;
+    padding: 6px;
+    width: 250px;
+}
+
+
+#reg_box .inputtext, #reg_box .inputpassword {
+    border-color: #96A6C5;
+    margin-top: 2px;
+}
+
+textarea, .inputtext, .inputpassword {
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+}
+
+
+.ff4 #reg_box select {
+    border-color: #96A6C5;
+}
+
+#reg_box select {
+    margin: 2px 0 0;
+     border-color: #96A6C5;
+}
+
+
+.field_container{
+    font-size: 13px;
+    height: 30px;
+    padding: 5px;
+}
+
+td, td.label {
+    font-weight: normal;
+    text-align: left;
+}
+
+#reg_box #reg div.large_form div.field_container select {
+    font-size: 13px;
+    height: 30px;
+    padding: 5px;
 }

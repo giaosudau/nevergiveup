@@ -1,0 +1,244 @@
+#right-box{width: 218px;float:left; position:relative; display:inline; overflow:hidden;/* padding-top:12px*/}
+.right-box-wrapper{width: 218px;}
+@media screen and (-webkit-min-device-pixel-ratio:0) {.moveLeft .right-box-wrapper.fixed_pos{margin-left: -95px;}}
+.moveLeft .right-box-wrapper.fixed_pos{margin-left: -95px\9;}
+	.status-pf{ line-height: 15px;margin-bottom:5px; width: 100%; /*padding-top:12px;*/}
+	.txtusername_pro{ font-size:18px; font-weight:bold; line-height:21px;margin:0 5px 10px 0; display:inline-block;}
+	.status-pf span.txtstatus{ padding:0 5px; font-size:12px;line-height:22px; color:#323232;}
+	.note-l{ background-position:-182px -29px; width: 16px; height:16px; margin:0 3px;}
+	.note-r { background-position:-159px -29px; width: 16px; height:16px; margin:0 3px;}
+	.Wrift{}
+	.Wrift p{ height:16px; overflow:hidden;}
+	.Wrift a{max-width:168px; overflow:hidden; white-space:nowrap; display:inline-block;}
+	.myfrdbir{ display:block;}
+	.myfrdbir:hover{ cursor:pointer;}
+	.des-box{ float:left;width:105px; overflow:hidden; color:#888888;}
+	.des-box.birth{word-spacing: -1px;}
+/*-----General--------*/
+#photo, #album, #blog, #star, #friend-birthday, #friend-intro, #services, #link, #friend-mp3, #friend-info, #friend #photo, #search-result #photo {margin-bottom:10px; height:1%;}
+.tab { background:#EDF7FD; border-bottom: 1px solid #D1E0E9; height: 19px; overflow: hidden; padding: 3px 5px 2px;}
+.tab h3 {color: #333333;float: left !important;font-size: 12px;font-weight: bold;text-align: left;}
+.tab a {float: right;}
+.cont-itemR {line-height: 15px;overflow: hidden;}
+.cont-itemR .actlink{ margin-top:8px;margin-bottom: 0;}
+.cont-item, .rowsttfrd{padding-bottom:5px;border-bottom: 1px solid #EAEFF4;overflow: hidden;margin-top: 5px; position:relative; height:1%;}
+.rowsttfrd{padding:3px 0;border-bottom: 1px solid #EAEFF4;overflow: hidden;margin-top: 0; position:relative; height:1%;}
+.rowsttfrd:hover{ cursor:pointer; background-color: #f4f7f9;}
+.rowboxright{padding-bottom:7px;border-bottom: 1px solid #EAEFF4;overflow: hidden;padding-top: 5px; position:relative; height:1%;}
+.rowboxright:hover{background-color: #f4f7f9;}
+.rowboxright.famous:hover{background-color: #f4f7f9; cursor:pointer;}
+a.boxfamousrt{display:block; text-decoration:none; color:#333;}
+a.boxfamousrt:hover{text-decoration:none;}
+.cont-item .avar-42, .rowboxright .avar-42{ margin:0 5px 0 0 !important;}
+.poAb{ position:absolute; bottom:10px; right:0; z-index:200;display: block;}
+.cont-item .rowcomrt{ height:55px; overflow:hidden; padding:0;}
+.star-status{width:78%;height:auto !important;height:expression(this.scrollHeight > 35? '35px': 'auto'); max-height:35px; overflow:hidden; float:left;}
+.rowcomlt {margin-right:5px;width:42px;float:left !important; display:inline-block;_margin-right:0;}
+a.icodelbxrt{width:18px; height:16px; background-position:-52px -143px; display:block; position:absolute; top:0; right:0;}
+a.icodelbxrt:hover{ background-position:-72px -143px;}
+/*-----Photo--------*/
+#photo .cont-item{ border:none; padding-bottom:0;margin: 0;}
+.body-photo .line{ padding-bottom:5px;width: 100%; display:block;}
+.cont-item .photoup img{}
+ul.facephotopr{ clear:both; height:1%; display:block; overflow:hidden;padding-bottom: 5px;padding-top: 3px; padding-bottom:0;}
+ul.facephotopr li{width:71px; height:52px; margin:2px 2px 0 0; float:left; display:inline;}
+ul.facephotopr li.end{ margin-right:0}
+.body-photo{ width:730px; position:relative; display:block;}
+.title-photo{font-size: 18px;font-weight: bold;text-align: left;}
+.title-photo .ico {color: #476DA4;font-size: 16px;font-weight: normal;}
+.album-user, .photo-user{ display:block; position:relative;padding-top:10px; height:1%;}
+.titpt{ float:left; width:400px; font-weight:bold; font-size:12px;line-height: 22px;}
+/*-----Album--------*/
+ul.albumpm{float:left; margin-top:15px}
+ul.albumpm li{float: left; margin-right: 12px; padding-bottom: 20px; width: 136px;}
+ul.albumpm li.end, ul.albumpm-pf li.end{ margin-right:0}
+ul.albumpm li .bgpm, ul.albumpm-pf li .bgpm{ margin:5px 0}
+ul.albumpm li .ctnAlbum{ width:130px; height:100px; background-position:-126px -404px; padding:3px 3px 5px 3px;}
+ul.albumpm li .ctnAlbum .imgAlbum{ overflow:hidden;height: 98px;}
+ul.albumpm li .nameAlbum{ display:block}
+ul.albumpm-pf li{ width:108px; margin-right:2px; float:left; padding-bottom:5px;}
+ul.albumpm-pf li .ctnAlbum{ background-position:0 -404px;height: 77px;padding: 1px 1px 0;width: 106px;}
+ul.albumpm-pf li .infopm{line-height: 15px;}
+ul.imgfacepm{float:left; margin-top:15px}
+ul.imgfacepm li{width:136px; float:left; margin-right:12px; position:relative; display:inline;}
+ul.imgfacepm li .imgpm{width:130px; height:98px; float:left; border:1px solid #c8d5e5; padding:2px; overflow:hidden; float:left; margin-bottom:5px}
+ul.imgfacepm li .imgpm a{ display:block;}
+ul.imgfacepm li.end{ margin-right:0}
+.tit{line-height: 15px;}
+/*-----Blog--------*/
+#blog .cont-item{padding-bottom: 3px;}
+.cont-itemR .title{ height:30px;max-height:30px;height:auto !important;overflow:hidden;}
+.cont-itemR .des{ height:45px;max-height:45px;height:auto !important; overflow:hidden; margin:0;}
+.cont-itemR .actlink {margin-top: 5px; display: block;line-height: 15px;}
+.user-blog { margin-top:8px; border-bottom:1px solid #eaeff4; padding-bottom:8px;_padding-bottom:0; overflow:hidden;}
+.user-blog .descr{line-height:16px;padding:7px 0;}
+.user-blog .descr img{margin:0 10px 0 0;text-align:left;}
+/*-----Friend online--------*/
+#friend-online{ margin-bottom:13px;}
+#friend-online .tab{ margin-bottom:5px;}
+/*-----button action--------*/
+#friend-online .btn_action a{margin-right:0px !important;}
+.btn_action{ padding-bottom:10px; height:1%;}
+.btn_action a{ float:left; display:inline-block; border:1px solid #8b8b8b; padding:0 2px; margin-right:3px; color:#333; text-decoration:none;line-height: 20px;
+background: #fafafa;
+background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), to(#f2f2f2));
+background: -webkit-linear-gradient(#ffffff, #f2f2f2);
+background: -moz-linear-gradient(#ffffff, #f2f2f2);
+background: -ms-linear-gradient(#ffffff, #f2f2f2);
+background: -o-linear-gradient(#ffffff, #f2f2f2);
+background: linear-gradient(#ffffff, #f2f2f2);}
+.btn_action span{ width:16px; height:16px; display:inline-block; margin-right:2px;float: left; _margin-right:-2px;}
+a.disable{ color:#888;cursor: default;}
+/*-----Friend music--------*/
+#friend-mp3 .contMp3{ width:78%;}
+/*-----Friend Intro--------*/
+#friend-info .box-info{padding-top: 2px;}
+#friend-info .box-info .bcl{ float:left; width:30%;}
+#friend-info .box-info .bcr{ float:left; width:70%; overflow:hidden;white-space:nowrap;text-overflow: ellipsis;-o-text-overflow: ellipsis;-ms-text-overflow: ellipsis;}
+.fwh{ width:150px; height:14px; overflow:hidden; white-space:nowrap;line-height:13px;text-overflow: ellipsis;-o-text-overflow: ellipsis;-ms-text-overflow: ellipsis;}
+/*-----Hot/biz profile--------*/
+#star .cont-item{ height:55px;}
+#star .ico-sp, #services .ico-sp { margin-left:5px;}
+.tinystar {background-image: url(../images/ico_tinystar.gif);background-repeat: no-repeat;float: left;height: 9px;margin-top: 5px;width: 41px;}
+.tinystar.star_0 {background-position: 0 -141px;}
+.tinystar.star_1 {background-position: 0 -61px;}
+.tinystar.star_2 {background-position: 0 -119px;}
+.tinystar.star_3 {background-position: 0 -41px;}
+.tinystar.star_4 {background-position: 0 -99px;}
+.tinystar.star_5 {background-position: 0 -20px;}
+.tinystar.star_6 {background-position: 0 -79px;}
+.tinystar.star_7 {background-position: 0 0;}
+.tinysflag {background-image: url(../images/ico_tinymedal.gif);background-repeat: no-repeat;float: left;height: 10px;margin-top: 5px;width: 41px;}
+.tinysflag.medal_1 {background-position: 0 -60px;}
+.tinysflag.medal_2 {background-position: 0 -120px;}
+.tinysflag.medal_3 {background-position: 0 -40px;}
+.tinysflag.medal_4 {background-position: 0 -101px;}
+.tinysflag.medal_5 {background-position: 0 -22px;}
+.tinysflag.medal_6 {background-position: 0 -80px;}
+.tinysflag.medal_7 {background-position: 0 0;}
+.tinyscom {background-image: url(../images/ico_tinycom.gif);background-repeat: no-repeat;float: left;height: 10px;margin-top: 5px;width: 41px;}
+.tinyscom.com_1{background-position: 0 -60px;}
+.tinyscom.com_2 {background-position: 0 -119px;}
+.tinyscom.com_3 {background-position: 0 -40px;}
+.tinyscom.com_4 {background-position: 0 -99px;}
+.tinyscom.com_5 {background-position: 0 -20px;}
+.tinyscom.com_6 {background-position: 0 -80px;}
+.tinyscom.com_7 {background-position: 0 0;}
+
+
+/*-----Link--------*/
+#link .rowcomrt {vertical-align:top; position:relative;padding-right:20px;line-height: 15px;overflow:hidden; padding:0;line-height: 14px;height: auto;}
+/*-----Gift--------*/
+.ficon_gift-app {background-position: 0px -2009px;	width: 15px;height: 15px;}
+.gift-app-icon-42 { width: 42px; float:left; height: 42px; margin:0 5px 0 0;}
+.gift-app-icon-42 img{ width:42px; height:42px;}
+.gift-app-icon-42 a{ display:inline-block;}
+
+/*-----right box Welcome page--------*/
+.info-ac{ padding-bottom:15px;}
+.info-ac p{ line-height:16px; padding-top:5px;}
+.btn-welcome { background:url(../images/btn-welcome.jpg) no-repeat; width:155px; display:block; margin:0 auto;}
+.up-info{ background-position:0 0; height:78px;}
+.up-photo{ background-position:0 -78px; height:90px;}
+.up-blog{ background-position:0 -170px; height:83px;}
+/*----- intro friend box -----*/
+.frlist{ padding:5px; height:265px; overflow-x:hidden; overflow-y:auto; position:relative;border: 3px solid #EDF7FD;margin-top: 8px;}
+.frlist li{ float:left !important;height: 42px;padding: 5px;width: 125px;border:1px solid #fff; margin-bottom:5px; text-align:left; display:inline; position:relative;}
+.frlist li:hover{ cursor:pointer; border:1px solid #e3eef8; display:inline;}
+.frlist li .avatar, .s2-box-list li .avatar{margin-right: 5px;float:left; display:block; position:relative;height: 42px;width: 42px;}
+.frlist li .user{color: #476DA4;height: 28px;line-height: 13px;overflow: hidden;text-align: left;width: 78px; font-weight:bold; float:inherit;}
+.frlist li .checked{ background-position:-209px -236px;height: 19px;margin-left: 5px;width: 20px; position:absolute; bottom:3px; left:48px;background-image:url(../images/skin-1.35.gif); background-repeat:no-repeat;}
+.font12{ font-size:12px;}
+.mbt10{ margin-top:5px;}
+.search-fr{background: url(../images/skin-1.18.gif) -196px -162px no-repeat;float: right;height: 16px;padding: 4px;width: 173px;}
+.search-fr input {background: none repeat scroll 0 0 transparent;border: medium none;color: #333333;float: left;font-size: 11px !important;height: 15px !important;line-height: 14px !important;padding: 0;width: 152px;}
+
+/*-----update layout photo--------*/
+.titphoto{ padding-bottom:5px; height:1%; margin-bottom:0}
+.rel{ position:relative;}
+.marbt15{ margin-bottom:15px;}
+.mart5{ margin-right:5px}
+.bxcontent{ height:1%; margin-bottom:25px;margin-bottom:10px;}
+.bxtiphoto{ background:#f6f8fe; padding:5px; margin-bottom:15px;}
+.bxtiphoto .icofeed {margin-top:3px;}
+.photo_loopbg, .bgfunc{background-image: url(../images/photo_loopbg.gif); background-repeat:repeat-x}
+.photo_imgsprt, .viewmorealb strong, .icodelp, .iconewfuc, .btntop, .photofaqs{ background:url(../images/photo_imgsprt_1.01.gif); background-repeat:no-repeat;}
+.photo_icoall{width:4px; height:7px; background-position:0 0; margin:6px 0 0 5px; float:right;}
+/*-----update layout photo-Namnt-------*/
+.rtviewall span.img_icoall {margin:7px 5px 0 5px;width:13px; height:5px; background-position:-208px -187px;}
+.button_crtalbum,.button_photoapp,.viewall_ico {background:url(../images/imgsprtpho_1.00.gif) no-repeat;display:block;text-indent:-9999em;}
+.button_crtalbum {background-position:0 -213px ;width:90px;height:25px;margin-right:4px;}
+.button_photoapp {background-position:-93px -213px ;width:126px;height:25px;}
+.bgsttphoto{ background:#f6f8fe; padding:5px 5px 5px 10px; margin-bottom:15px;color:#888;}
+.bgsttphoto span.status_app{font-size:14px;line-height:23px;}
+.titab .title_phoapp{font-size:14px;color:#000;font-weight:bold}
+
+.icoalbm{width:18px; height:11px; margin-top:3px; background-position:-40px 0; float:left;}
+.photo_icolock{width:9px; height:11px; background-position:-28px 0}
+ul.ltab{width:665px;font-weight:bold; font-size:12px; display:block; float:left}
+ul.ltab li{float:left;}
+ul.ltab li a{text-decoration:none; padding:3px 10px;border:1px solid #e3e7f0;border-radius: 3px; -moz-border-radius: 3px;-webkit-border-radius: 3px; margin-right:8px; background:#fff; float:left}
+ul.ltab li a:hover, ul.ltab li a.current{ background:#e3e7f0; color:#333;}
+.titab{ background-position:0 -100px; background-repeat:repeat-x; height:25px;}
+.titab .rtviewall{background:#fff; padding-left:2px;}
+.titab .ltitbx{width:728px; font-size:12px}
+.bgltitbx{ background:#fff; padding-right:5px;}
+ul.faceuphoto{width:730px; display:block; height:1%; float:left;}
+ul.faceuphoto.line{ border-bottom:1px solid #e3e7f0; padding-bottom:12px}
+ul.faceuphoto li{ border:1px solid #cdcdcd; padding:2px; width:130px; height:95px; overflow:hidden;margin-right:12px; z-index:9; display:inline; float:left}
+ul.faceuphoto li.end{ margin-right:0}
+ul.faceuphoto li.rows{ margin-bottom:12px}
+ul.faceuphoto li.rows .imgphoto{width:130px; height:95px; overflow:hidden;}
+ul.newalb{width:730px; height:1%;}
+ul.newalb li{ float:left; margin-right:12px;;}
+ul.newalb li.rows{padding-bottom:25px;}
+ul.newalb li.rows .imgphoto{width:130px; height:95px; overflow:hidden;}
+ul.newalb li.end{ margin-right:0}
+ul.newalb li .bgalm, ul.listalb li .bgalm{width:130px; height:95px; background-position:0 -27px; padding:3px 3px 7px; margin-bottom:5px;}
+.fixnamealb{ height:16px; overflow:hidden; width:136px;}
+.ctnkeyalb{ position:absolute; right:3px; bottom:7px; background:#fff; border-left:1px solid #c1c1c1; border-top:1px solid #c1c1c1; padding:3px 5px}
+.bgpass{width:130px; height:95px; background-position:-144px -27px; float:left}
+
+.left_text {width:640px;overflow: hidden; padding-top:2px;}
+.rightbtns {width: 80px; text-align: right;}
+.photofaqs{background-position:-75px 0;width:72px;height:25px;text-indent:-99999px;display:inline-block;text-indent:0;font-size:0;line-height:0;overflow:hidden;vertical-align:bottom;}
+
+/* By Thaotlh: Like button on profile name header */
+.profile_like_btn, .profile_fan_btn {text-indent: -999999em; display: inline-block;height:22px;vertical-align:6px;margin: 0 5px;vertical-align:middle;}
+.profile_like_btn {width:63px;background-position: 0 -192px;}
+.profile_fan_btn {width:78px;background-position: -196px -192px;}
+
+/*Box Your status*/
+.icofrdstt{ margin-top:4px;}
+.myfrdstt{ margin-bottom:5px;}
+.statusfrd{width:200px; float:left;height:expression(this.scrollHeight > 35? '35px': 'auto'); max-height:35px; overflow:hidden; cursor: pointer;}
+.icolikestt{background-position:0 -451px; width:16px; height:16px; display:inline-block; margin-right:3px;}
+.nameuserstt{ float:left; height:16px; color:#476da4; font-weight:bold; overflow:hidden;}
+.btnfrdstt{ margin-left:17px;}
+
+/*Box my gift*/
+ul.mygift{ clear:both; height:1%; display:block; overflow:hidden;padding-bottom: 5px;padding-top: 3px; padding-bottom:0;}
+ul.mygift li{width:71px; margin:0px 2px 10px 0; float:left; display:inline; text-align:center;}
+ul.mygift li.end{ margin-right:0}
+
+.topbtnrt{margin-bottom:13px;height: 1%;}
+.topbtnrt .btn_L7{padding-left:3px; margin-right:3px;}
+.topbtnrt .btn_L7 em{padding-right:3px;}
+
+.btn_colright{background-image:url(../images/btn_right.gif); background-repeat:no-repeat; height:23px; float:left; text-indent:-9999px;}
+.btn_colright.createalbum{width:72px; background-position:0 0;}
+.btn_colright.writeblog{width:66px; background-position:-77px 0;}
+.btn_colright.givegift{width:70px; background-position:-148px 0;}
+.btn_colright.tease{width:76px; background-position:0 -37px;}
+.btn_colright.message{width:64px; background-position:-79px -37px;}
+.btn_colright.sharefrd{width:116px; background-position:0 -74px; margin-top:5px;}
+.btn_colright.setbackground{width:103px; background-position:0 -109px;}
+.btn_colright.setmusic{width:106px; background-position:-107px -109px;}
+.btn_colright.maright5{ margin-right:5px}
+.btn_colright.maright4{ margin-right:4px}
+
+/*Vote*/
+.ctnbxvotevip{margin-bottom:13px;}
+.contbxvotevip{padding-left:10px; margin:5px 0;}
+.contbxvotevip input{ margin-right:3px;}
+.res_votevip{ line-height:25px; margin-left:3px;}

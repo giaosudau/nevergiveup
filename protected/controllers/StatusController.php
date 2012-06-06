@@ -9,6 +9,7 @@ class StatusController extends Controller {
      *      using two-column layout. See 'protected/views/layouts/column2.php'.
      */
     public $layout = '//layouts/column2';
+    
 
     /**
      *
@@ -33,7 +34,7 @@ class StatusController extends Controller {
                 // 'view' actions
                 'actions' => array(
                     'index',
-                    'view'
+                    'view',
                 ),
                 'users' => array(
                     '*'
@@ -45,8 +46,9 @@ class StatusController extends Controller {
                 'actions' => array(
                     'create',
                     'update',
-                    "ajaxcreate",
-                    'status_thumbup'
+                    'ajaxcreate',
+                    'status_thumbup',
+                    'ajaxcomment'
                 ),
                 'users' => array(
                     '@'
@@ -57,6 +59,7 @@ class StatusController extends Controller {
                 // 'delete' actions
                 'actions' => array(
                     'admin',
+                    'ajaxcreate',
                     'delete'
                 ),
                 'users' => array(
@@ -72,20 +75,6 @@ class StatusController extends Controller {
         );
     }
 
-    /**
-     * Displays a particular model.
-     *
-     * @param integer $id
-     *        	the ID of the model to be displayed
-     */
-    // public function actionView($id) {
-    // $status = $this->loadModel($id);
-    // $comment = $this->newComment($status);
-    // $this->render('view', array(
-    // 'status' => $this->loadModel($id),
-    // 'comment' => $comment,
-    // ));
-    // }
     public function actionView($id) {
         $post = $this->loadModel($id);
         $comment = $this->newComment($post);
@@ -97,7 +86,7 @@ class StatusController extends Controller {
 
         //$post->thumbUp ( $id );
         //echo $post->getThumbUp ( $id ); 
-       $this->render('view', array(
+        $this->render('view', array(
             'model' => $post,
             'comment' => $comment,
             'like' => $like
@@ -109,69 +98,137 @@ class StatusController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view'
      * page.
      */
+    public function actionAjaxComment() {
+        $model = new Comment();
+        $model->status_id = $_POST['status_id'];
+        $model->message = $_POST['comment'];
+        $model->friend_id = "";
+        $model->created = date('Y-m-d H:i:s');
+        $baseUrl = Yii::app()->baseUrl;
+        if ($model->save()) {
+            $json_data = array('status_id' => $model->status_id,
+                'comment_id' => $model->comment_id,
+                'friend_id' => $model->friend_id,
+                'message' => $model->message,
+                'avatar' => Register::model()->findByAttributes(array(
+                    'user_id' => Yii::app()->user->id))->picture);
+            echo CJSON::encode(array(
+                'error' => 'false',
+                'comment' => $json_data,
+            ));
+        }
+    }
+    
+    
+    
+    public static function convertDate2String($inputDate,$dateFormat=1) {
+
+    switch ($dateFormat) {
+       case 1:
+            return date('F d, Y h:i A', strtotime($inputDate));
+       break;
+
+       case 2:
+            return date('F d, Y G:i', strtotime($inputDate));
+       break;
+
+       case 3:
+            return date('M d, Y h:i A', strtotime($inputDate));
+       break;
+
+       case 4:
+            return date('M d, Y G:i', strtotime($inputDate));
+       break;
+    }
+}
+
+
+
+
+
     public function actionAjaxCreate() {
         $model = new Status ();
+
         if (isset($_POST['status'])) {
             $model->message = $_POST['status'];
             $model->created = date("Y-m-d H:m:s");
             $model->user_id = Yii::app()->user->id;
             $model->thumbs_down = $model->thumbs_up = 0;
-            $user ='hhhhhhh'; //Register::model()->findByPk(array('status_id' =>$model->user_id))->email;
-            if ($model->save())
-               /* echo '<div class="load_status">
-                            <div class="status_img"><img src="blankSilhouette.png" /></div>
-                            <div class="status_text"><a href="#" class="blue"><?PHP echo $user; ?></a>
-                            <p class="text">' . $model->message . '</p>
-                            <div class="date">' .$model->created . ' &middot; <a href="#" class="light_blue">
-                            Like</a> &middot; <a href="#" class="light_blue">Comment</a></div>
-                            </div>
-                            <div class="clear"></div>
-                            </div>
+
+
+            //$status_id = Yii::app()->request->getParam('status_id');
+
+            $comment = Comment::model()->findAllByAttributes(array('status_id' => $model->status_id));
+            if (count($comment)) {
+                foreach ($comment as $value => $name) {
+                    $comment .= CJSON::encode(array('message' => $name->message,
+                                'comment_id' => $name->comment_id,
+                                'picture' => Friend::model()->findByPk($name->friend_id)->user_id));
+                }
+            }
+            $model->save();
+
+            $json_data = array(
+                'status_id' => $model->status_id,
+                'message' => $model->message,
+                'picture' => Register::model()->findByAttributes(array('user_id' => Yii::app()->user->id))->picture,
+                'like' => $model->thumbs_up,
+            );
+
+//            echo json_encode($json_data);
+//            echo CJSON::encode(array(
+//                'error' => 'false',
+//                'status' => $json_data,
+//                'comment' => $comment,
+//            ));
+            $date = $this->convertDate2String($model->created);
+            echo '
+    <div class="stbody">
+        <div class="stimg">
+            <img style="width:50px;height:50px" src="/nevergiveup/images/uploads/' . $json_data["picture"] . '">
+       </div>
+        <div class="sttext"><a href="#"><strong>'
+                    . Register::model()->findByPk($model->user_id)->name_first 
+                    ." ". Register::model()->findByPk($model->user_id)->name_last 
+                    . " ".   ' </strong></a> </br>' .
+            $model->message .
+                    
+            '<div class="sttime">'. $date . '</div></div>
+        <a href="#" class="delete" style="display: none; "> Remove</a>
+
+        <a href="#"id ="comment_link">Comment</a>
+        <span class="icodot"> 5 comment</span>
+        <span class="likelink"><a  href="" isliked="0">Like</a> 10 liked</span>
+        <div id="box_comment' . $model->status_id . '" class="bxcomment">
+            
+
+        </div>
+        <form>
+                <div id="status' . $model->status_id . '" class="rowcomment" >
+                    <div class="rowcommentlt">
+                        <a>
+                            <img width="40" height="40" src="/nevergiveup/images/uploads/' . $json_data["picture"] . '">
+                        </a>                                        
+                        <textarea class ="text_area" id="txtComment' . $model->status_id . '"></textarea>
+                        <br>
+                    </div> 
+                    <div class="bxcmtend">
+                        <span class="tipcmtend"></span>
+                        <span class="btncmtend">
+                            <a class="comment_submit" 
+                             id="' . $model->status_id . '"><em>Comment</em></a>             
                             
-<div class="comment_box" id="c6">
-<form method="post" action="" name="6">
-<textarea class="text_area" name="comment_value" id="textarea6">
-</textarea><br />
-<input type="button" value=" Comment " class="comment_submit" id="6"/>
-</form>
-</div>
+                        </span>
+                    </div>
+                </div>
+            </form>
+    </div> 
 
 ';
-                *
-                */
-               echo '
-<div class="stbody">
-    <div class="stimg">
-        2 Image Part
-    </div>
-    <div class="sttext">
-        3 Text Part
-    </div>
-
-    <a href="#"id ="comment_link">Comment</a>
-    <span class="icodot"> 5 comment</span>
-    <span class="likelink"><a  href="" isliked="0">Like</a> 10 liked</span>
-
-</div>     
 
 
 
-<div id="box_comment" class="bxcomment">
-    <div id="buser_2870117628" class="rowcomment">
-        <div id="hint" class="hint">Enter Comment</div>
-    </div>
-    <div id="comment_id" class="rowcomment" >
-        <div class="rowcommentlt">
-            <a>
-                <img width="40" height="40" src="http://3.1.s50.avatar.zdn.vn/avatar_files/3/c/d/8/giaosudau_50_3.jpg">
-            </a>
-            <textarea id="txtComment"></textarea>
-        </div>
-        
-           
 
-    </div>
-</div>';
         }
     }
 
@@ -254,15 +311,39 @@ class StatusController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Status');
+       /*  $dataProvider = new CActiveDataProvider('Status', array(
+                    'criteria' => array(
+                        'condition' => 'user_id=' . Yii::app()->user->id,                        
+                    ),
+                    'pagination' => array(
+                        'pageSize' => 20,
+                    ),
+                ));
         // order status
         
         $dataProvider->sort->defaultOrder = 'status_id DESC';
-        
+
         $this->render('status', array(
-               'dataProvider' => $dataProvider,
-        //  'model' => $model
-        ));
+            'dataProvider' => $dataProvider,
+                //  'model' => $model
+        )); */
+        $criteria = new CDbCriteria;
+    	$total = Status::model()->count();
+        // order 
+        $criteria->order= 'status_id DESC';
+    	
+    	$pages = new CPagination($total);
+    	$pages->pageSize = 20;
+    	$pages->applyLimit($criteria);
+    	
+    	$status = Status::model()->findAll($criteria);
+        
+    	
+    	$this->render('status_paging', array(
+    			'status' => $status,
+    			'pages' => $pages,
+    			));    	
+    	
     }
 
     /**
@@ -273,7 +354,6 @@ class StatusController extends Controller {
         $model->unsetAttributes(); // clear any default values
         if (isset($_GET ['Status']))
             $model->attributes = $_GET ['Status'];
-
         $this->render('admin', array(
             'model' => $model
         ));
@@ -332,7 +412,6 @@ class StatusController extends Controller {
 //        if($_POST['name']=='down'){
 //            $status->thumbsDownKick($status_id);
 //        }
-
         $thumbs = $status->getThumbUp($status->status_id);
         echo '<b> Liked: </b>' . $thumbs['up'] . '<b> Dislike </b>' . $thumbs['down'];
 
@@ -348,6 +427,5 @@ class StatusController extends Controller {
     }
 
 }
-
 
 ?>

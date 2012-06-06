@@ -25,11 +25,11 @@ class RegisterController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('create', 'view','uploadimage'),
+                'actions' => array('create', 'view', 'uploadimage'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('update', 'newfriend','uploadimage'),
+                'actions' => array('update', 'newfriend', 'searchuser', 'uploadimage'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -139,11 +139,23 @@ class RegisterController extends Controller {
     /**
      * Manages all models.
      */
+    public function actionSearchUser() {
+        $res = array();
+        if (isset($_GET['term'])) {
+            $qtxt = "SELECT username, name_first, name_last FROM user WHERE username LIKE :username";
+            $command = Yii::app()->db->createCommand($qtxt);
+            $command->bindValue(":username", '%' . $_GET['term'] . '%', PDO::PARAM_STR);
+            $res = $command->queryColumn();
+        }
+        echo CJSON::encode($res);
+        Yii::app()->end();
+    }
+
     public function actionUploadImage() {
         $valid_formats = array('jpg', 'png', 'jpeg', 'bmp');
-        $path = $baseUrl = Yii::app()->baseUrl .'/images/uploads/';
+        $path = $baseUrl = Yii::app()->baseUrl . '/images/uploads/';
         $user_id = Yii::app()->user->id;
-        
+
         if (isset($_POST) && $_SERVER['REQUEST_METHOD'] == 'POST') {
             $name = $_FILES['photoimg']['name'];
             $size = $_FILES['photoimg']['size'];
@@ -153,27 +165,24 @@ class RegisterController extends Controller {
             if (in_array($ext, $valid_formats)) {
                 if ($size < (1024 * 1024 * 4)) {
                     $actual_image_name = time() . $user_id . "." . $ext;
-                    $tmp = $_FILES['photoimg']['tmp_name'];                    
-                    if(move_uploaded_file($tmp, 'images/uploads/'.$actual_image_name)){
-                        $user = $this->loadModel(2);
-                        $user->picture = $actual_image_name;
-                        $user->active = 22;
-                        $user->save();
-                        
-                        echo  "<img src='../../../images/uploads/".$actual_image_name."' class='preview'>";
-                        echo $user->picture;
-                        $ss = $this->loadModel(2);
-                        echo $ss->picture;
+                    $tmp = $_FILES['photoimg']['tmp_name'];
+                    if (move_uploaded_file($tmp, 'images/uploads/' . $actual_image_name)) {
+                        if (Register::model()->updateByPk($user_id, array('picture' => $actual_image_name))) {
+                            echo "<img src='../../../images/uploads/" . $actual_image_name . "' class='preview'>";
+                        }
                     }
-                    else echo "Failed"; 
+                    else
+                        echo "Failed";
                 }
-                else echo "File Size Must Max 4MB"; 
+                else
+                    echo "File Size Must Max 4MB";
             }
-            else echo "Invalid Format";
+            else
+                echo "Invalid Format";
         }
-        else echo "Please Select Image";
-        
-        
+        else
+            echo "Please Select Image";
+        //$this->render('uploadImage');
     }
 
     public function actionAdmin() {

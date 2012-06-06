@@ -41,7 +41,7 @@ font-size:12px
 
 <div style="width:600px">
 
-        <form id="imageform" method="post" enctype="multipart/form-data" action='../uploadimage'>
+        <form id="imageform" method="post" enctype="multipart/form-data" action='/nevergiveup/index.php/register/uploadimage'>
             Upload your image <input type="file" name="photoimg" id="photoimg" />
         </form>
         <div id='preview'>

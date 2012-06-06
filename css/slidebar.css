@@ -1,0 +1,116 @@
+   body {
+        color: #333333;
+        font: 11px/18px tahoma,Helvetica,verdana,arial,sans-serif;
+        text-align: left;
+        text-decoration: none;
+    }
+    .right-box-wrapper {
+        width: 218px;
+    }
+    .rigt-suggest-friend {
+        display: inline;
+        float: right;       
+        position: relative;
+        width: 218px;
+        height: 30px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .tab {
+        background: none repeat scroll 0 0 #EDF7FD;
+        border-bottom: 1px solid #D1E0E9;
+        height: 19px;
+
+        padding: 3px 5px 2px;
+    }
+    .tab a {
+        float: right;
+    }
+    .tab h3 {
+        color: #333333;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: left;
+
+    }
+
+    a, a:active {
+        color: #476DA4;
+        text-decoration: none;
+    }
+
+    .clr {
+        clear: both;
+    }
+
+    element.style {
+        display: block;
+    }
+    .rowboxright {
+        border-bottom: 1px solid #EAEFF4;
+        height: 50px;
+
+        padding-bottom: 7px;
+        padding-top: 5px;
+        position: relative;
+    }
+
+
+
+
+
+
+
+    .Wrift a {
+        max-width: 168px;
+        margin-left: 8px;
+        white-space: nowrap;
+        display: inline-block;
+    }
+
+
+    .avar-42{
+        float: left;
+        height: 42px;
+        margin: 0 2px 2px 0;
+        width: 42px;
+    }
+
+    .avar-42 a {
+        margin-right: 8px;
+
+    }
+
+    .fl {
+        float: left !important;
+    }
+
+
+    .des-box {
+        color: #888888;
+        float: left;
+        overflow: hidden;
+        width: 105px;
+    }
+    .des-box a{
+        margin-left: 8px;   
+    }
+
+
+    .poAb {
+        bottom: 10px;
+        display: block;
+        position: absolute;
+        right: 0;
+        z-index: 200;
+    }
+
+    .ico_add-fr{ background-position:0 -476px; width:13px; height:16px;}
+    div {
+        display: block;
+    }

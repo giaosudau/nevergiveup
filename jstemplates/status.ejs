@@ -1,0 +1,36 @@
+<div class="stbody">
+        <div class="stimg">
+            <img width="40" height="40" src="/images/uploads/"/> 
+       </div>
+        <div class="sttext">
+            <%= status_id %>
+            
+            </div>
+        <a href="#" class="delete" style="display: none; "> Remove</a>
+
+        <a href="#" id ="comment_link">Comment</a>
+        <span class="icodot"> 5 comment</span>
+        <span class="likelink"><a  href="" isliked="0">Like</a> 10 liked</span>
+        <div id="box_comment<%= status.status_id %>" class="bxcomment">          
+
+        </div>
+        <form>
+                <div id="status<%= status.status_id %>" class="rowcomment" >
+                    <div class="rowcommentlt">
+                        <a>
+                            <img width="40" height="40" src="/images/uploads/<%= status.picture %>"/>
+                        </a>                                        
+                        <textarea class ="text_area" id="txtComment<%=status.status_id %>"></textarea>
+                        <br>
+                    </div> 
+                    <div class="bxcmtend">
+                        <span class="tipcmtend">Nhấn Shift + Enter để xuống dòng</span>
+                        <span class="btncmtend">
+                            <a class="comment_submit" 
+                             id="<%= status.status_id %>"><em>Comment</em></a>             
+                            
+                        </span>
+                    </div>
+                </div>
+            </form>
+    </div> 

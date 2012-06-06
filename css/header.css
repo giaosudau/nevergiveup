@@ -1,0 +1,907 @@
+#header {
+    left: 0;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 899;
+}
+.zingheader * {
+    border: 0 none;
+    list-style: none outside none;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+}
+.zingheader {
+    color: #FFFFFF;
+    font-family: Tahoma,Helvetica,Verdana,Arial;
+    font-size: 11px;
+    text-decoration: none;
+    width: 100%;
+}
+.zingmain {
+    margin: 0 auto;
+    position: relative;
+    width: 980px;
+}
+.zingtop, .zingcomponent, ul.zingtab li a.selected {
+    background-image: url("../images/header/zing_imgsprt-1.03.gif");
+    background-repeat: repeat-x;
+}
+.zingsearch, .zingbtnsearch, .zingicohome a, .zmp3_upload_btn, .quikupdatestt_btn {
+    background-image: url("../images/header/zing_imgsprt-1.03.gif");
+    background-repeat: no-repeat;
+}
+.zingtop {
+    background-position: 0 -96px;
+}
+.zingtop, .zinglogo a, .zingsearch, .zingborder, .zingborderinner, .zingfamily {
+    height: 35px;
+}
+.zingheader, .zingtop, .zingcomponent {
+    min-width: 980px;
+}
+.zinglogo {
+    float: left;
+    overflow: hidden;
+    width: 145px;
+}
+.zinglogo a {
+    background-image: url("../images/header/uit.jpg");
+    background-repeat: no-repeat;
+    display: block;
+    width: 145px;
+}
+.zhome_header .zinglogo a {
+    background-position: 0 0;
+}
+/*.zme_header .zinglogo a {
+    background-position: 0 -35px;
+}
+.zmp3_header .zinglogo a {
+    background-position: 0 -70px;
+}
+.znews_header .zinglogo a {
+    background-position: 0 -105px;
+}
+.zlive_header .zinglogo a {
+    background-position: 0 -140px;
+    }*/
+.zingsearch {
+    background-position: 0 0;
+    float: left;
+    width: 300px;
+}
+input.zingbxsearch {
+    border: 0 none;
+    color: #646464;
+    float: left;
+    font: 12px/26px Tahoma,Arial;
+    height: 24px;
+    margin: 5px 3px;
+    padding: 0 5px;
+    width: 250px;
+}
+input.zingbxsearch {
+    line-height: normal;
+}
+.zingbtnsearch {
+    background-color: transparent;
+    border: 0 none;
+    border-radius: 0 0 0 0;
+    cursor: pointer;
+    float: left;
+    height: 28px;
+    margin: 3px 0 0;
+    outline: medium none;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -9999px;
+    width: 33px;
+}
+.zhome_header .zingbtnsearch {
+    background-position: -34px -48px;
+}
+.zme_header .zingbtnsearch {
+    background-position: 0 -48px;
+}
+.znews_header .zingbtnsearch {
+    background-position: -68px -48px;
+}
+.zmp3_header .zingbtnsearch {
+    background-position: -102px -48px;
+}
+.zlive_header .zingbtnsearch {
+    background-position: -136px -48px;
+}
+.zingfamily {
+    float: right;
+    line-height: 35px;
+    text-align: right;
+    width: 200px;
+}
+ul.zingtab {
+    float: right;
+}
+ul.zingtab li {
+    float: left;
+    list-style: none outside none;
+    padding: 0 3px;
+}
+ul.zingtab li a {
+    color: #FFFFFF;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+ul.zingtab li a span {
+    display: block;
+    padding: 0 1px;
+}
+ul.zingtab li a strong {
+    display: block;
+    padding: 0 8px;
+}
+ul.zingtab li a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+ul.zingtab li a.selected {
+    background-position: 0 -135px;
+    border-left: 1px solid #3C3D3E;
+    border-right: 1px solid #3C3D3E;
+}
+ul.zingtab li a.selected span {
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    padding: 0;
+}
+ul.zingtab li a.selected strong {
+    border-left: 1px solid #606060;
+    border-right: 1px solid #606060;
+    padding: 0 7px;
+}
+.zingarrowuser, .ntbtn {
+    background-image: url("../images/header/zinguser_icnsprt-1.03.gif");
+    background-repeat: no-repeat;
+}
+.zinguser * {
+    border: 0 none;
+    list-style: none outside none;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+}
+.zinguser {
+    float: right;
+    font-family: Tahoma,Arial;
+    font-size: 11px;
+    text-align: right;
+    width: 267px;
+}
+.zingpersonal {
+    background-position: 0 -63px;
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 34px;
+    position: relative;
+    width: 110px;
+}
+.zingpersonal .zingborder {
+    display: block;
+}
+.zingpersonal .zingborderinner {
+    display: block;
+    padding: 0 5px;
+    text-align: left;
+}
+.zingpersonal .zingborderinner a, .zingpersonal .zingborderinner a:hover {
+    text-decoration: none;
+}
+.zingpersonal .zingavtuser {
+    border: 1px solid #9C9C9C;
+    border-radius: 2px 2px 2px 2px;
+    float: left;
+    height: 20px;
+    margin-right: 8px;
+    margin-top: 6px;
+    padding: 1px;
+    width: 20px;
+}
+.zingpersonal .zingavtuser img {
+    height: 20px;
+    width: 20px;
+}
+.zingpersonal .zingnameuser {
+    color: #E6E6E6;
+    display: block;
+    float: left;
+    line-height: 35px;
+    overflow: hidden;
+    width: 55px;
+}
+.zingpersonal .zingarrowuser {
+    background-position: -94px 0;
+    display: inline;
+    float: right;
+    height: 8px;
+    margin-top: 14px;
+    width: 12px;
+}
+.zingpersonal .zingborder.selected {
+    background-color: #FFFFFF;
+    border-left: 2px solid #355D98;
+    border-right: 2px solid #355D98;
+}
+.zingpersonal .zingborder.selected .zingborderinner {
+    padding: 0 3px;
+}
+.zingpersonal .zingborder.selected .zingnameuser {
+    color: #343434;
+}
+.zingpersonal .zingborder.selected .zingavtuser {
+    background-color: #333333;
+    border: 1px solid #FFFFFF;
+    padding: 1px;
+}
+.zingpersonal .zingborder.selected .zingarrowuser {
+    background-position: -105px 0;
+}
+.zingaccuser {
+    float: right;
+    padding-right: 10px;
+    padding-top: 3px;
+    position: relative;
+}
+.ntbtn {
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 24px;
+    margin: 5px 0 0 10px;
+    outline: medium none;
+    position: relative;
+    width: 27px;
+}
+.ntbtn.zingnotify {
+    background-position: 0 0;
+}
+.ntbtn.zingnotify.hover, .ntbtn.zingnotify:hover {
+    background-position: 0 -34px;
+}
+.ntbtn.zingnotify.selected {
+    background-position: 0 -68px;
+}
+.ntbtn.zingmessage {
+    background-position: -31px 0;
+}
+.ntbtn.zingmessage.hover, .ntbtn.zingmessage:hover {
+    background-position: -31px -34px;
+}
+.ntbtn.zingmessage.selected {
+    background-position: -31px -68px;
+}
+.ntbtn.zingmakefrd {
+    background-position: -62px 0;
+}
+.ntbtn.zingmakefrd.hover, .ntbtn.zingmakefrd:hover {
+    background-position: -62px -34px;
+}
+.ntbtn.zingmakefrd.selected {
+    background-position: -62px -68px;
+}
+.zingaccuser .zingcounter {
+    background: none repeat scroll 0 0 #FF0100;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 14px;
+    margin: 0;
+    min-width: 14px;
+    padding: 0 2px 1px;
+    position: absolute;
+    right: -6px;
+    text-align: center;
+    top: -2px;
+    white-space: nowrap;
+}
+.boxshadow_popup {
+    color: #333333;
+    position: absolute;
+    width: 371px;
+}
+.popup_edge_shadow {
+    background: url("../images/header/notif_shadow_edge.png") repeat-y scroll right center transparent;
+    padding-right: 8px;
+}
+.notif_boxshadow {
+    height: 8px;
+    margin-left: 3px;
+}
+.notif_boxshadow .ntifboxshd_left, .notif_boxshadow .ntifboxshd_right {
+    font-size: 0;
+    height: 8px;
+    width: 8px;
+}
+.notif_boxshadow .ntifboxshd_left {
+    background: url("../images/header/notif_shadow_botleft.png") no-repeat scroll left bottom transparent;
+}
+.notif_boxshadow .ntifboxshd_right {
+    background: url("../images/header/notif_shadow_botright.png") no-repeat scroll right bottom transparent;
+}
+.notif_boxshadow .ntifboxshd_center {
+    background: url("../images/header/notif_shadow_botloop.png") repeat-x scroll 0 0 transparent;
+    font-size: 0;
+    height: 8px;
+    margin: 0 8px;
+}
+.popup_border {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid #01548D;
+    line-height: 16px;
+    position: relative;
+    text-align: left;
+}
+.overlap {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 2px;
+    line-height: 2px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: -2px;
+    z-index: 600;
+}
+.overlap.notify {
+    left: 71px;
+}
+.overlap.message {
+    left: 108px;
+}
+.overlap.friend {
+    left: 145px;
+}
+.zingaccuser .overlap {
+    width: 23px;
+}
+.zingaccuser .boxshadow_popup {
+    cursor: default;
+    top: 24px;
+    width: 300px;
+    z-index: 600;
+}
+.zingaccuser .boxshadow_popup.notify {
+    right: -202px;
+}
+.zingaccuser .boxshadow_popup.message {
+    right: -165px;
+}
+.zingaccuser .boxshadow_popup.friend {
+    right: -128px;
+}
+.ntpopup_head {
+    border-bottom: 1px solid #DEE5EF;
+    color: #333333;
+    font-size: 12px;
+    padding: 5px 8px;
+}
+.zme_notify {
+    border-bottom: 1px solid #DEE5EF;
+    border-top: 1px solid #FFFFFF;
+    color: #333333;
+    display: block;
+    height: 1%;
+    padding: 5px;
+    text-decoration: none;
+}
+.zme_notify:hover {
+    background: url("../images/header/notif_hover.jpg") repeat-x scroll 0 0 transparent;
+    border-bottom: 1px solid #C8D4E5;
+    border-top: 1px solid #C8D4E5;
+    cursor: pointer;
+    text-decoration: none;
+}
+.zme_notify .zme-notify-fr-name {
+    color: #476DA4;
+    font-weight: bold;
+}
+.zme_notify .zme-notify-fr-name a {
+    color: #476DA4;
+    text-decoration: none;
+}
+.zme_notify .zme-notify-fr-name a:hover {
+    color: #476DA4;
+    text-decoration: underline;
+}
+.zme_notify .grey {
+    color: #888888;
+}
+.zme_notify .contnotify {
+    color: #333333;
+    display: block;
+    margin-left: 18px;
+    margin-top: -3px;
+    overflow: hidden;
+}
+.zme_notify .zme-notify-item-cont {
+    display: block;
+    margin-left: 50px;
+    margin-top: -3px;
+    overflow: hidden;
+}
+.zme_notify .zme-notify-item-cont .notificon_fam {
+    margin-right: 2px;
+    vertical-align: middle;
+}
+.zme-notify-bottom {
+    background-color: #F0F3F7;
+    border-top: 1px solid #FFFFFF;
+    clear: both;
+    height: 22px;
+    line-height: normal;
+    padding: 5px;
+}
+.zme-notify-bottom .btn_L3 {
+    float: right;
+    margin-right: 0 !important;
+}
+.zme-notify-bottom .notif_bot_left {
+    float: left;
+    padding-top: 3px;
+}
+.zme-notify-bottom .notif_bot_left a {
+    font-weight: bold;
+    margin-right: 8px;
+}
+.zme-notify-bottom .notif_bot_left a {
+    color: #476DA4;
+    text-decoration: none;
+}
+.zme-notify-bottom .notif_bot_left a:hover {
+    color: #476DA4;
+    text-decoration: underline;
+}
+.zme-notify-bottom .notif_bot_left .lk_bullet {
+    color: #476DA4;
+    font-size: 13px;
+    line-height: 12px;
+}
+.notificon {
+    background-image: url("http://css.me.zdn.vn/v3/images/zme_icons16x16-1.16.gif");
+    border: medium none;
+    display: inline-block;
+    float: left;
+    font-size: 0;
+    height: 12px;
+    margin-right: 5px;
+    width: 13px;
+}
+.notifbox_cont .btn_L5 em, .notifbox_cont .btn_L3 em {
+    font-size: 11px;
+}
+.zingaccuser .notif_noitem {
+    border-bottom: 1px solid #DEE5EF;
+    padding: 10px 8px;
+    text-align: center;
+}
+.zingaccuser .notif_loading {
+    background: url("../images/header/loader.gif") no-repeat scroll center center transparent;
+    border-bottom: 1px solid #DEE5EF;
+    height: 12px;
+    padding: 10px;
+    text-align: center;
+    text-indent: -99999em;
+}
+.pmlist .zme_notify .img {
+    border: medium none;
+    float: left;
+    height: 42px;
+    width: 42px;
+}
+.pmlist .zme_notify .img img {
+    height: 42px;
+    width: 42px;
+}
+.pmlist .zme_notify .pmtxt {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+.frdlist .zme_notify:hover {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #DEE5EF;
+    border-top: 1px solid #FFFFFF;
+    color: #333333;
+}
+.frdlist .zme_notify .img {
+    border: medium none;
+    float: left;
+    height: 42px;
+    width: 42px;
+}
+.frdlist .zme_notify .img img {
+    height: 42px;
+    width: 42px;
+}
+.frdlist .zme-notify-fr-name {
+    font-size: 12px;
+    overflow: hidden;
+    padding-bottom: 3px;
+    white-space: nowrap;
+    width: 100%;
+}
+.frdlist .zme-notify-time, .notif_invite_msg {
+    width: 100px;
+}
+.frdlist .zme-notify-time {
+    color: #888888;
+}
+.frdlist .zme-notify-item:hover {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #DEE5EF;
+    border-top: 1px solid #FFFFFF;
+}
+.notif_invite_msg {
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+}
+.zinguser .btn_L5 {
+    background-image: url("http://css.me.zdn.vn/v3/images/btn_sprite.jpg");
+    background-position: 0 -332px;
+    border: 1px solid #888888;
+    color: #555555;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 19px;
+    margin-left: 5px;
+    margin-right: 0;
+    padding-left: 8px;
+    text-decoration: none;
+    vertical-align: bottom;
+}
+.zinguser .btn_L5 em {
+    display: inline-block;
+    font-style: normal;
+    height: 20px;
+    padding-right: 8px;
+}
+.zinguser .btn_L5:hover {
+    border: 1px solid #3784B2;
+    color: #3784B2;
+    text-decoration: none;
+}
+.accept_btn, .deny_btn {
+    float: right;
+    margin-top: 10px;
+}
+.deny_btn {
+    margin-left: 3px;
+}
+.zingtxtuser {
+    color: #FFFFFF;
+    line-height: 34px;
+    text-align: right;
+}
+.zingtxtuser a, .zingtxtuser a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.zingtxtuser a:hover strong {
+    text-decoration: underline;
+}
+.zhome_header .zingtxtuser a strong, .zhome_header .zingtxtuser a:hover strong {
+    color: #5F8CC8;
+}
+.znews_header .zingtxtuser a strong, .znews_header .zingtxtuser a:hover strong {
+    color: #F37B24;
+}
+.zinguser .btn_L3 {
+    background-color: #56A8DB;
+    background-position: 0 0;
+    border: 1px solid #1A5B99;
+    color: #FFFFFF !important;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 19px;
+    padding-left: 8px;
+}
+.zinguser .btn_L3 em {
+    display: inline-block;
+    font-style: normal;
+    height: 20px;
+    padding-right: 8px;
+}
+.zinguser .btn_L3:hover {
+    background-color: #1C8ACF;
+    background-position: 0 -20px;
+    border: 1px solid #002376;
+}
+.zinguser .btn_L3, .zinguser .btn_L3:hover {
+    background-image: url("http://css.me.zdn.vn/v3/images/btn_sprite.jpg");
+    text-decoration: none;
+    vertical-align: bottom;
+}
+.zingpersonal .boxshadow_popup {
+    right: -8px;
+    top: 32px;
+    width: 320px;
+    z-index: 1100;
+}
+.zingpersonal .overlap {
+    width: 106px;
+}
+.zingpersonal .popup_inner_cont {
+    padding: 10px;
+}
+.zingpersonal .popup_inner_cont a {
+    color: #476DA4;
+    text-decoration: none;
+}
+.zingpersonal .popup_inner_cont a:hover {
+    color: #01548D;
+    text-decoration: underline;
+}
+.zingpersonal .thumb_avatar {
+    float: left;
+    margin-right: 10px;
+}
+.zingpersonal .thumb_avatar img {
+    height: 130px;
+    width: 130px;
+}
+.zingpersonal .acc_user_menu {
+    float: left;
+    list-style: none outside none;
+    margin-top: -3px;
+}
+.zingpersonal .acc_user_menu li {
+    display: block;
+    font-size: 12px;
+    height: 18px;
+    line-height: 15px;
+    list-style: none outside none;
+    padding: 2px 0;
+}
+.zingpersonal .acc_user_menu li .icn, .zingpersonal .note-l, .zingpersonal .note-r {
+    background-image: url("../images/header/acc_icnsprt.gif");
+    display: inline-block;
+    font-size: 0;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 16px;
+}
+.icn_profile {
+    background-position: 0 0;
+}
+.icn_privacy {
+    background-position: 0 -32px;
+}
+.icn_editinfo {
+    background-position: 0 -16px;
+}
+.icn_logout {
+    background-position: 0 -112px;
+}
+.icn_zmewallet {
+    background-position: 0 -64px;
+}
+.icn_infoboard {
+    background-position: 0 -48px;
+}
+.icn_friends {
+    background-position: 0 -80px;
+}
+.icn_changepass {
+    background-position: 0 -96px;
+}
+.zingpersonal .stt_newupdate {
+    border-top: 1px solid #D5DCE2;
+    clear: both;
+    display: block;
+    font-size: 12px;
+    margin: 5px -10px 0;
+    padding: 3px 10px;
+}
+.zingpersonal .stt_date {
+    color: #888888;
+    font-size: 11px;
+}
+.zingpersonal .quik_update_sttbox {
+    background-color: #F0F3F8;
+    margin: -5px 0 0;
+    padding: 10px;
+}
+.zingpersonal .quik_update_sttbox .qikstt_txtbox {
+    background-color: #FFFFFF;
+    border: 1px solid #ACB5C4;
+    color: #888888;
+    font-family: Tahoma,Arial;
+    font-size: 12px;
+    height: 19px;
+    line-height: 16px;
+    padding: 1px 5px;
+    width: 220px;
+}
+.zingpersonal .quik_update_sttbox .quikupdatestt_btn {
+    background-position: -208px -58px;
+    display: block;
+    height: 22px;
+    text-indent: -9999em;
+    width: 50px;
+}
+.zingpersonal .quik_update_sttbox .quikupdatestt_btn:hover {
+    background-position: -258px -58px;
+}
+.zingpersonal .note-l {
+    background-position: 0 -128px;
+    height: 16px;
+    margin: 0 2px;
+    width: 16px;
+}
+.zingpersonal .note-r {
+    background-position: 0 -144px;
+    height: 16px;
+    margin: 0 2px;
+    width: 16px;
+}
+.zingcomponent {
+    background-position: 0 -174px;
+    border-bottom: 1px solid #DADADA;
+    height: 29px;
+}
+.zingicohome a {
+    background-position: -174px -48px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 25px;
+    margin: 2px 3px 0 0;
+    text-indent: -9999px;
+    width: 25px;
+}
+ul.zingmenuchild {
+    float: left;
+}
+ul.zingmenuchild li {
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 29px;
+    list-style: none outside none;
+}
+ul.zingmenuchild li a {
+    color: #444444;
+    display: block;
+    padding: 0 8px;
+    text-decoration: none;
+}
+ul.zingmenuchild li a:hover, ul.zingmenuchild li:hover > a, ul.zingmenuchild li a.selected {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-left: 1px solid #DADADA;
+    border-right: 1px solid #DADADA;
+    padding: 0 7px;
+    text-decoration: none;
+}
+ul.zingmenuchild .zingsubmenu {
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    line-height: 29px;
+    max-width: 200px;
+    min-width: 160px;
+    overflow: auto;
+    padding: 1px;
+    position: absolute;
+    z-index: 100;
+}
+ul.zingmenuchild .zingsubmenu li {
+    border-top: 1px solid #E2E2E2;
+    display: block;
+    float: none;
+    font-weight: normal;
+    line-height: 16px;
+    vertical-align: bottom;
+}
+ul.zingmenuchild .zingsubmenu li:first-child {
+    border-top: 0 none;
+}
+ul.zingmenuchild .zingsubmenu li a {
+    border-left: 0 none;
+    border-right: 0 none;
+    padding: 5px;
+}
+ul.zingmenuchild .zingsubmenu li a:hover {
+    background-image: url("../images/header/zing_imgsprt-1.03.gif");
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 5px;
+}
+ul.zingmenuchild .zingsubmenu_multicol {
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    overflow: auto;
+    padding: 1px;
+    position: absolute;
+    z-index: 100;
+}
+.subcol {
+    border-left: 1px solid #DDDDDD;
+    float: left;
+    min-height: 214px;
+    overflow: hidden;
+}
+.subcol.first-child, .subcol:first-child {
+    border-left: 0 none;
+}
+.subcol h2 {
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #EBEBEB;
+    color: #333333;
+    font-size: 12px;
+    line-height: normal;
+    padding: 10px 0;
+    text-align: center;
+}
+.subcol ul {
+    min-width: 150px;
+    overflow: hidden;
+}
+.subcol ul li {
+    border-bottom: 1px solid #EBEBEB;
+    display: block;
+    float: none;
+    line-height: 29px;
+}
+.subcol ul li a {
+    font-weight: normal;
+}
+.subcol ul li:last-child {
+    border-bottom: 0 none;
+}
+.subcol ul li a:hover {
+    background-image: url("../images/header/zing_imgsprt-1.03.gif");
+    background-repeat: repeat-x;
+    border: 0 none;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 0 8px;
+}
+.subcol .subinner_item li {
+    border-right: 1px solid #EBEBEB;
+    display: inline;
+    float: left;
+}
+ul.zingmenuchild .zingsubmenu {
+    display: none;
+}
+ul.zingmenuchild li:hover .zingsubmenu {
+    display: block;
+}
+ul.zingsubmenu, .zingsubmenu_multicol {
+    display: none;
+}
+ul.zingmenuchild li:hover ul.zingsubmenu, ul.zingmenuchild li.iehover ul, ul.zingmenuchild li:hover .zingsubmenu_multicol {
+    display: block;
+}
+.znews_header .zingsubmenu li a:hover {
+    background-color: #FD7B04;
+    background-position: 0 -235px;
+}
+.zmp3_header .subcol ul li a:hover, .zmp3_header .zingsubmenu li a:hover {
+    background-color: #673287;
+    background-position: 0 -206px;
+}

@@ -9,12 +9,12 @@
  */
 
 /**
- * CUserIdentity is a base class for representing identities that are authenticated based on a username and a password.
+ * CUserIdentity is a base class for representing identities that are authenticated based on a email and a password.
  *
  * Derived classes should implement {@link authenticate} with the actual
- * authentication scheme (e.g. checking username and password against a DB table).
+ * authentication scheme (e.g. checking email and password against a DB table).
  *
- * By default, CUserIdentity assumes the {@link username} is a unique identifier
+ * By default, CUserIdentity assumes the {@link email} is a unique identifier
  * and thus use it as the {@link id ID} of the identity.
  *
  * @property string $id The unique identifier for the identity.
@@ -28,9 +28,9 @@
 class CUserIdentity extends CBaseUserIdentity
 {
 	/**
-	 * @var string username
+	 * @var string email
 	 */
-	public $username;
+	public $email;
 	/**
 	 * @var string password
 	 */
@@ -38,17 +38,17 @@ class CUserIdentity extends CBaseUserIdentity
 
 	/**
 	 * Constructor.
-	 * @param string $username username
+	 * @param string $email email
 	 * @param string $password password
 	 */
-	public function __construct($username,$password)
+	public function __construct($email,$password)
 	{
-		$this->username=$username;
+		$this->email=$email;
 		$this->password=$password;
 	}
 
 	/**
-	 * Authenticates a user based on {@link username} and {@link password}.
+	 * Authenticates a user based on {@link email} and {@link password}.
 	 * Derived classes should override this method, or an exception will be thrown.
 	 * This method is required by {@link IUserIdentity}.
 	 * @return boolean whether authentication succeeds.
@@ -60,23 +60,23 @@ class CUserIdentity extends CBaseUserIdentity
 
 	/**
 	 * Returns the unique identifier for the identity.
-	 * The default implementation simply returns {@link username}.
+	 * The default implementation simply returns {@link email}.
 	 * This method is required by {@link IUserIdentity}.
 	 * @return string the unique identifier for the identity.
 	 */
 	public function getId()
 	{
-		return $this->username;
+		return $this->email;
 	}
 
 	/**
 	 * Returns the display name for the identity.
-	 * The default implementation simply returns {@link username}.
+	 * The default implementation simply returns {@link email}.
 	 * This method is required by {@link IUserIdentity}.
 	 * @return string the display name for the identity.
 	 */
 	public function getName()
 	{
-		return $this->username;
+		return $this->email;
 	}
 }

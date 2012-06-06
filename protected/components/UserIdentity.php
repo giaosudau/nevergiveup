@@ -55,10 +55,10 @@ class UserIdentity extends CUserIdentity {
 
     public function authenticate() {
         $user = Register::model()->findByAttributes(array(
-            'username' => $this->username
+            'email' => $this->email
                 ));
         if ($user === null)
-            $this->errorCode = self::ERROR_USERNAME_INVALID;
+            $this->errorCode = self::ERROR_EMAIL_INVALID;
         else if (!md5($user->password) === $this->password)
             $this->errorCode = self::ERROR_PASSWORD_INVALID;
         else {

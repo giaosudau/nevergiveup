@@ -14,6 +14,7 @@
  * @property string $looking_for
  * @property string $phone
  * @property string $interest
+ * @property string $sex
  * @property string $education
  * @property string $hobbies
  * @property string $created
@@ -50,6 +51,7 @@ class Profile extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('user_id', 'numerical', 'integerOnly'=>true),
+                        array('sex', 'length', 'max'=>7),    
 			array('rating, nickname, relationship', 'length', 'max'=>45),
 			array('about, looking_for, interest, education, hobbies', 'length', 'max'=>255),
 			array('phone', 'length', 'max'=>100),
@@ -82,6 +84,7 @@ class Profile extends CActiveRecord
 			'user_id' => 'User',
 			'rating' => 'Rating',
 			'dob' => 'Dob',
+                        'sex' => 'Sex',
 			'nickname' => 'Nickname',
 			'about' => 'About',
 			'relationship' => 'Relationship',

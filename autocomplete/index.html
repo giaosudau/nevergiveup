@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>Ajax - Powered / auto-complete plugin for jquery.js 1.3.2 </title>
+
+<link rel="stylesheet" href="css/jqautocomplete.css" type="text/css" media="screen" charset="utf-8" />
+
+<style type="text/css">
+
+	body {
+		font-family: Lucida Grande, Arial, sans-serif;
+		font-size: 10px;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+	
+	table
+	{
+		border: 1px;
+		background-color: #999;
+		font-size: 10px;
+	}
+	tr
+	{
+		vertical-align: top;
+	}
+	th
+	{
+		text-align: left;
+		background-color: #ccc;
+	}
+	th,
+	td
+	{
+		padding: 2px;
+		font-family: Lucida Grande, Arial, sans-serif;
+		font-size: 1.2em;
+	}
+	td
+	{
+		background-color: #fff;
+	}
+	
+	a {
+		font-weight: bold;
+		text-decoration: none;
+		color: #f30;
+	}
+	
+	a:hover {
+		color: #fff;
+		background-color: #f30; 
+	}
+	
+	#wrapper {
+		width: 600px;
+		margin: 10px auto;
+		text-align: left;
+	}
+	
+	#content {
+		font-size: 1.2em;
+		line-height: 1.8em;
+	}
+	
+	#content h1 {
+		font-size: 1.6em;
+		border-bottom: 1px solid #ccc;
+		padding: 5px 0 5px 0;
+	}
+
+	#content h2 {
+		border-top: 1px solid #ddd;
+		padding-top: 5px;
+		font-size: 1.2em;
+		margin-top: 3em;
+	}
+	
+	#content h3 {
+		font-size: 1.1em;
+		margin-top: 3em;
+	}
+
+	small
+	{
+		color: #999;
+	}
+
+	label
+	{
+		font-weight: bold;
+	}
+
+	
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/autocomplete.jquery.js"></script>
+<script type="text/javascript">
+var json_options = {
+		script:'test.php?json=true&limit=6&',
+		varname:'input',
+		json:true,
+		shownoresults:true,
+		maxresults:16,
+		callback: function (obj) { $('#json_info').html('you have selected: '+obj.id + ' ' + obj.value + ' (' + obj.info + ')'); }
+		};
+var xml_options = {
+		script:'test.php?limit=6&',
+		varname:'input',
+		json:false,
+		shownoresults:true,
+		maxresults:16,
+		callback: function (obj) { $('#xml_info').html('you have selected: '+obj.id + ' ' + obj.value + ' (' + obj.info + ')'); }
+		};
+		$(function(){
+		$('#test_json').autoComplete(json_options);
+		$('#test_xml').autoComplete(xml_options);
+		});
+</script>
+</head>
+
+
+
+
+<body>
+
+
+
+
+<h3>Example (JSON)</h3>
+
+<div>
+<span class="ac_holder" style="margin-left:100px">
+<input style="width: 200px" type="text" id="test_json" value="" />
+</span><span id='json_info'></span>
+</div>
+
+
+
+<h3>Example (XML)</h3>
+
+<div>
+  <p><span class="ac_holder" style="margin-left:100px">
+    <input style="width: 200px" type="text" id="test_xml" />
+    </span><span id='xml_info'></span></p>
+
+</div>
+
+</body>
+</html>

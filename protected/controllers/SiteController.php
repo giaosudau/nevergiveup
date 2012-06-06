@@ -33,8 +33,11 @@ class SiteController extends Controller {
         // using the default layout 'protected/views/layouts/main.php'
         //$this->render('index');
         $this->layout = false;
-
-        $this->render('homepage-unlogin');
+        if (Yii::app()->user->id > 0) {
+            $this->redirect(Yii::app()->baseUrl . "/index.php/status");
+        }
+        else
+            $this->render('homepage-unlogin');
     }
 
     /**
@@ -121,7 +124,7 @@ class SiteController extends Controller {
                     $user->beforeSave();
                     $user->save();
                     // create friend_list when register;
-                    $friendlist = new FriendList ();
+                    $friendlist = new FriendList ();    
                     // create friendlist
                     $friendlist->user_id = $user->user_id;
                     $friendlist->save();
@@ -136,14 +139,51 @@ class SiteController extends Controller {
         }
     }
 
-    public function actionHomePage() {
-        $model = new LoginForm();      
-        $model->username = $_POST['usernamelogin'];
+    public function actionIndexRegister() {
+        $model = new Register();
+        $model->email = $_POST['email_register'];
+        $model->name_first = $_POST['firstname'];
+        $model->name_last = $_POST['lastname'];
+        $model->password = md5($_POST['password_register']);
+        $model->password_repeat = md5($_POST['password_repeat']);
+        $model->created = date('Y-m-d H:i:s');
+        $model->active = 1;
+        $model->picture = '';
+        // friend list
+        $friend_list = new FriendList();
+
+        // create Profile
+        $profile = new Profile();
+
+        $profile->created = date("Y-m-d H:m:s");
+        $profile->dob = date('F d, Y ', strtotime($_POST['dob']));
+        if ($_POST['sex'] == 1) {
+            $profile->sex = 'Male';
+        } else if ($_POST['sex'] == 2) {
+            $profile->sex = 'Female';
+        }
+        if ($model->save()) {
+            $profile->user_id = $model->user_id;
+            $friend_list->user_id = $model->user_id;
+            $profile->save();
+            $friend_list->save();
+            $identity = new UserIdentity($model->email, $model->password);
+            $identity->authenticate();
+            $identity->errorCode = UserIdentity::ERROR_NONE;
+            if (Yii::app()->user->login($identity, 3600))
+                echo "SUCCESS";
+        } else {
+            echo (json_encode($model->getErrors()));
+        }
+    }
+
+    public function actionIndexLogin() {
+        $model = new LoginForm();
+        $model->email = $_POST['emaillogin'];
         $model->password = $_POST['passwordlogin'];
-        $model->rememberMe =1;
+        $model->rememberMe = 1;
         //echo $model->errors;
-        
-        echo $model->username . "&&" . $model->password . "$$" .$model->rememberMe;
+        // echo $model->email . "&&" . $model->password . "$$" .$model->rememberMe;
         // validate user input and redirect to the previous page if valid        
         if ($model->validate() && $model->login()) {
             $this->loginStatus = true;
@@ -151,11 +191,12 @@ class SiteController extends Controller {
             //$this->redirect(Yii::app()->user->returnUrl);
             echo "SUCCESS";
         } else {
-
-          echo "ERROR";
-           var_dump($model->getErrors());
+            echo (json_encode($model->getErrors()));
         }
-         
+    }
+
+    public function actionAjaxSearch() {
+        $this->render("search");
     }
 
     function actionProfile() {
@@ -181,6 +222,109 @@ class SiteController extends Controller {
             $this->render('profile', array(
                 'model' => $model
             ));
+        }
+    }
+
+    public function actionUpdateNotification() {
+        $friend_ids = Notification::model()->findAllByAttributes(array(
+            'type' => 'friend_request',
+            'user_id' => Yii::app()->user->id,
+                ));
+        $result = array();
+        foreach ($friend_ids as $friend_id) {
+            array_push($result, $friend_id['msg']);
+        }
+        $friends = array();
+        foreach ($result as $user) {
+            $u = Register::model()->findByPk($user);
+            array_push($friends, array('user_id' => $u->user_id, 'picture' => $u->picture,
+                'name' => $u->name_first . " " . $u->name_last));
+        }
+        $friend_request = array('friend_request' => count(
+                    Notification::model()->findAllByAttributes(array(
+                        'type' => 'friend_request',
+                        'user_id' => Yii::app()->user->id,            
+                    ))),
+            'request' => $friends
+        );
+        echo json_encode($friend_request);
+    }
+
+    public function actionRenderHeader() {
+        $this->layout = false;
+        $this->render('header');
+    }
+
+    public function actionAcceptFriendRequest() {
+        $friend_id = $_POST['user_id'];
+        $notification_id = "";
+        Notification::model()->deleteAllByAttributes(array(
+            'notification_id' => Notification::model()->findByAttributes(
+                    array('user_id' => Yii::app()->user->id,
+                        'msg' => $friend_id))->notification_id)
+        );
+        $this->addFriend($friend_id);
+
+        echo "SUCCESS";
+
+        //notification friend accept;
+    }
+
+    public function actionDeclineFriendRequest() {
+        $friend_id = $_POST['user_id']; 
+        $notification_id = "";
+        Notification::model()->deleteAllByAttributes(array(
+            'notification_id' => Notification::model()->findByAttributes(
+                    array('user_id' => Yii::app()->user->id,
+                        'msg' => $friend_id))->notification_id)
+        );
+        //Notification::model()->deleteByPk($notification_id);
+        // notification friend decline
+    }
+
+    public function actionSendFriendRequest() {
+        $friend_id = $_POST['friend_id'];
+        $fr = new Notification();
+        $fr->user_id = $friend_id;
+        $fr->type = 'friend_request';
+        //$msg = array('user_id' => Yii::app()->user->id, 'type'=>'friend_request');
+        $fr->msg = Yii::app()->user->id;
+        $fr->created = date('Y-m-d H:i:s');
+        $fr->save();
+        $data = array('user_id' => $fr->user_id, 'type' => $fr->type, 'msg' => $fr->msg);
+        echo json_encode($data);
+    }
+
+    public function addFriend($friend_id) {
+        $friend = new Friend;
+        $friend->created = date('Y-m-d H:i:s');
+        $friend->user_id = $friend_id;
+        $friend->friend_list_id = FriendList::model()->findByAttributes(array(
+                    'user_id' => Yii::app()->user->id
+                ))->friend_list_id;
+        $friend->save();
+        $friend_list = new FriendList;
+        $friend_list->user_id = Yii::app()->user->id;
+        $friend_list->friend_id = $friend->friend_id;
+        $friend_list->save();
+    }
+
+    public static function createNotification($type) {
+        $types = array('friend_request', 'comment', 'friend_accept', 'status', 'like_status');
+        switch ($type) {
+            case $types[0]:
+                //$json = array('user_id'=>$user_id,'')
+                break;
+            case $types[1]:
+                break;
+            case $types[2]:
+                break;
+            case $types[3]:
+                break;
+            case $types[4]:
+                break;
+            default:
+                break;
         }
     }
 

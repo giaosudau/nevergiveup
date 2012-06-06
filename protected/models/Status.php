@@ -96,7 +96,7 @@ class Status extends CActiveRecord {
             'commentCount' => array(
                 self::STAT,
                 'Comment',
-                'comment_id'
+                'status_id'
             ),
             'thumbUpDowns' => array(
                 self::HAS_MANY,
