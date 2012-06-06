@@ -194,13 +194,8 @@ class StatusController extends Controller {
             $model->message .
                     
             '<div class="sttime">'. $date . '</div></div>
-        <a href="#" class="delete" style="display: none; "> Remove</a>
-
-        <a href="#"id ="comment_link">Comment</a>
-        <span class="icodot"> 5 comment</span>
-        <span class="likelink"><a  href="" isliked="0">Like</a> 10 liked</span>
-        <div id="box_comment' . $model->status_id . '" class="bxcomment">
-            
+        <a href="#" class="delete" style="display: none; "> Remove</a>   
+        <div id="box_comment' . $model->status_id . '" class="bxcomment">         
 
         </div>
         <form>

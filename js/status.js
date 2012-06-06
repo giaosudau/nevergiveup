@@ -55,7 +55,7 @@ $(document).ready(function(){
                         +'" class="rowcomment">'+
                         '<div class="rowcommentlt">'+
                         '<a><img width="40" height="40"'
-                        +'src="/images/upload/'
+                        +'src="/nevergiveup/images/uploads/'
                         + obj.comment.avatar
                         +'">'
                         +'</a>'+

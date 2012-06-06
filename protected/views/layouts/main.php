@@ -129,7 +129,7 @@ $userid=Yii::app()->user->id;
 	<li id="blogp"><a href="http://localhost/nevergiveup/index.php/site/page?view=about" target="_top" title="Blog của tôi">Blog của tôi</a></li>
 	<li id="blogf"><a href="http://localhost/nevergiveup/index.php/site/page?view=about" target="_top" title="Blog bạn bè">Blog bạn bè</a></li>
 	<li id="blogpl"><a href="http://localhost/nevergiveup/index.php/site/page?view=about" target="_top" title="Cộng đồng">Cộng đồng</a></li>
-	<li id="bloge"><a href="http://localhost/nevergiveup/index.php/site/page?view=about" target="_top" title="Sự kiện">Sự kiện&nbsp;<img border="0" src="./Zing Me   Chào mừng_files/Hot1.gif"></a></li>
+	<li id="bloge"><a href="http://localhost/nevergiveup/index.php/site/page?view=about" target="_top" title="Sự kiện">Sự kiện&nbsp;<img border="0" src="/nevergiveup/images/Hot1.gif"></a></li>
 </ul>
 <div class="menu-app">
 	<a id="lphoto" href="http://localhost/nevergiveup/index.php/site/page?view=about" target="_top" title="Photo">

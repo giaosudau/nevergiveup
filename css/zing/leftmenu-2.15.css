@@ -2,9 +2,9 @@
 		ul.list-app li span, .menu-item, .menu-item-sub, .icofeed{ background-image:url(http://localhost/nevergiveup/images/appsprite-1.74.png); background-repeat:no-repeat;}
 		#left-menu{width:143px;_width:140px;float:left; display:inline; position:relative;margin-bottom: 10px;}
                 #left-menufrd{width:160px;_width:157px;float:left; margin-bottom: 10px;}
-				.menu-app a:hover, .menu-app a.current, .menu-app-sub a:hover{ border-top:1px solid #c8d4e5;border-bottom:1px solid #c8d4e5; text-decoration:none; background:#fff url(../images/bghovermenu.gif) repeat-x 0 bottom;}
+				.menu-app a:hover, .menu-app a.current, .menu-app-sub a:hover{ border-top:1px solid #c8d4e5;border-bottom:1px solid #c8d4e5; text-decoration:none; background:#fff url(/nevergiveup/images/bghovermenu.gif) repeat-x 0 bottom;}
 				.menu-appfrd a{padding:3px 10px 2px; display:block;color:#000;border-top:1px solid #fff;}
-				.menu-appfrd a.current, .menu-appfrd a:hover{background:#fff url(../images/bghovermenu.gif) repeat-x 0 bottom; text-decoration:none;}
+				.menu-appfrd a.current, .menu-appfrd a:hover{background:#fff url(/nevergiveup/images/bghovermenu.gif) repeat-x 0 bottom; text-decoration:none;}
 				.menu-app a, .menu-app-sub a, .menu-app-nocontent{padding:3px 10px 2px; display:block;color:#000;border-top:1px solid #fff;border-bottom:1px solid #fff;}
 				a.menu-app-nocontent{ margin-top:-5px; color:#808080;}
 				a.menu-app-nocontent:hover{ text-decoration:none;}

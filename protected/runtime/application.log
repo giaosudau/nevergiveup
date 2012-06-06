@@ -8952,3 +8952,322 @@ Stack trace:
 REQUEST_URI=/nevergiveup/index.php/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
 HTTP_REFERER=http://localhost/nevergiveup/index.php/status
 ---
+2012/06/06 16:21:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Zing Me   Chào mừng_files/Hot1.gif".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nevergiveup/index.php/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status
+---
+2012/06/06 16:24:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/appsprite-1.75.png".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('images/appsprit...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nevergiveup/index.php/images/appsprite-1.75.png
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:25:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:25:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:25:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/appsprite-1.75.png".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('images/appsprit...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nevergiveup/index.php/images/appsprite-1.75.png
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:27:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Zing Me   Chào mừng_files/Hot1.gif".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nevergiveup/index.php/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status
+---
+2012/06/06 16:28:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Zing Me   Chào mừng_files/Hot1.gif".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nevergiveup/index.php/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status
+---
+2012/06/06 16:28:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Zing Me   Chào mừng_files/Hot1.gif".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nevergiveup/index.php/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status
+---
+2012/06/06 16:37:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:37:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:37:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/appsprite-1.75.png".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('images/appsprit...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nevergiveup/index.php/images/appsprite-1.75.png
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:38:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:38:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:39:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:41:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:41:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:41:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:42:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:42:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:43:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:43:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:44:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:44:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Zing Me   Chào mừng_files".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('Zing Me   Ch??o...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('Zing Me   Ch??o...')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/Zing Me ...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/Zing%20Me%20%20%20Ch%C3%A0o%20m%E1%BB%ABng_files/Hot1.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:45:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:54:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 16:59:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/skin-1.47.gif".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('images/skin-1.4...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nevergiveup/index.php/images/skin-1.47.gif
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 17:00:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/skin-1.47.gif".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('images/skin-1.4...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nevergiveup/index.php/images/skin-1.47.gif
+---
+2012/06/06 17:00:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/skin-1.47.gif".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('images/skin-1.4...')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nevergiveup/index.php/images/skin-1.47.gif
+---
