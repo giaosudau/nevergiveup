@@ -9271,3 +9271,469 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/nevergiveup/index.php/images/skin-1.47.gif
 ---
+2012/06/06 17:34:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 18:28:58 [error] [php] Trying to get property of non-object (/home/sepdau/workspace/nevergiveup/protected/views/status/_comments.php:13)
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(870): StatusController->renderFile()
+#1 /home/sepdau/workspace/nevergiveup/protected/views/status/status_paging.php(101): StatusController->renderPartial()
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CBaseController.php(127): require()
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/web/CBaseController.php(96): StatusController->renderInternal()
+#4 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(870): StatusController->renderFile()
+#5 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(783): StatusController->renderPartial()
+#6 /home/sepdau/workspace/nevergiveup/protected/controllers/StatusController.php(340): StatusController->render()
+#7 /home/sepdau/workspace/nevergiveup/protected/framework/web/actions/CInlineAction.php(50): StatusController->actionIndex()
+#8 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(309): CInlineAction->runWithParams()
+#9 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilterChain.php(134): StatusController->runAction()
+#10 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#12 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CInlineFilter.php(59): StatusController->filterAccessControl()
+#13 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#14 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(292): CFilterChain->run()
+#15 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(266): StatusController->runActionWithFilters()
+#16 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): StatusController->run()
+#17 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#18 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /home/sepdau/workspace/nevergiveup/index.php(14): CWebApplication->run()
+REQUEST_URI=/nevergiveup/index.php/status
+in /home/sepdau/workspace/nevergiveup/protected/views/status/_comments.php (13)
+in /home/sepdau/workspace/nevergiveup/protected/views/status/status_paging.php (101)
+in /home/sepdau/workspace/nevergiveup/protected/controllers/StatusController.php (340)
+2012/06/06 18:37:16 [error] [php] Trying to get property of non-object (/home/sepdau/workspace/nevergiveup/protected/views/status/_comments.php:13)
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(870): StatusController->renderFile()
+#1 /home/sepdau/workspace/nevergiveup/protected/views/status/status_paging.php(101): StatusController->renderPartial()
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CBaseController.php(127): require()
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/web/CBaseController.php(96): StatusController->renderInternal()
+#4 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(870): StatusController->renderFile()
+#5 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(783): StatusController->renderPartial()
+#6 /home/sepdau/workspace/nevergiveup/protected/controllers/StatusController.php(340): StatusController->render()
+#7 /home/sepdau/workspace/nevergiveup/protected/framework/web/actions/CInlineAction.php(50): StatusController->actionIndex()
+#8 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(309): CInlineAction->runWithParams()
+#9 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilterChain.php(134): StatusController->runAction()
+#10 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#12 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CInlineFilter.php(59): StatusController->filterAccessControl()
+#13 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#14 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(292): CFilterChain->run()
+#15 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(266): StatusController->runActionWithFilters()
+#16 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): StatusController->run()
+#17 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#18 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /home/sepdau/workspace/nevergiveup/index.php(14): CWebApplication->run()
+REQUEST_URI=/nevergiveup/index.php/status
+in /home/sepdau/workspace/nevergiveup/protected/views/status/_comments.php (13)
+in /home/sepdau/workspace/nevergiveup/protected/views/status/status_paging.php (101)
+in /home/sepdau/workspace/nevergiveup/protected/controllers/StatusController.php (340)
+2012/06/06 18:37:18 [error] [php] Trying to get property of non-object (/home/sepdau/workspace/nevergiveup/protected/views/status/_comments.php:13)
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(870): StatusController->renderFile()
+#1 /home/sepdau/workspace/nevergiveup/protected/views/status/status_paging.php(101): StatusController->renderPartial()
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CBaseController.php(127): require()
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/web/CBaseController.php(96): StatusController->renderInternal()
+#4 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(870): StatusController->renderFile()
+#5 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(783): StatusController->renderPartial()
+#6 /home/sepdau/workspace/nevergiveup/protected/controllers/StatusController.php(340): StatusController->render()
+#7 /home/sepdau/workspace/nevergiveup/protected/framework/web/actions/CInlineAction.php(50): StatusController->actionIndex()
+#8 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(309): CInlineAction->runWithParams()
+#9 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilterChain.php(134): StatusController->runAction()
+#10 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#12 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CInlineFilter.php(59): StatusController->filterAccessControl()
+#13 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#14 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(292): CFilterChain->run()
+#15 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(266): StatusController->runActionWithFilters()
+#16 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): StatusController->run()
+#17 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#18 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /home/sepdau/workspace/nevergiveup/index.php(14): CWebApplication->run()
+REQUEST_URI=/nevergiveup/index.php/status
+in /home/sepdau/workspace/nevergiveup/protected/views/status/_comments.php (13)
+in /home/sepdau/workspace/nevergiveup/protected/views/status/status_paging.php (101)
+in /home/sepdau/workspace/nevergiveup/protected/controllers/StatusController.php (340)
+2012/06/06 18:37:18 [error] [php] Trying to get property of non-object (/home/sepdau/workspace/nevergiveup/protected/views/status/_comments.php:13)
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(870): StatusController->renderFile()
+#1 /home/sepdau/workspace/nevergiveup/protected/views/status/status_paging.php(101): StatusController->renderPartial()
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CBaseController.php(127): require()
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/web/CBaseController.php(96): StatusController->renderInternal()
+#4 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(870): StatusController->renderFile()
+#5 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(783): StatusController->renderPartial()
+#6 /home/sepdau/workspace/nevergiveup/protected/controllers/StatusController.php(340): StatusController->render()
+#7 /home/sepdau/workspace/nevergiveup/protected/framework/web/actions/CInlineAction.php(50): StatusController->actionIndex()
+#8 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(309): CInlineAction->runWithParams()
+#9 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilterChain.php(134): StatusController->runAction()
+#10 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#12 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CInlineFilter.php(59): StatusController->filterAccessControl()
+#13 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#14 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(292): CFilterChain->run()
+#15 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(266): StatusController->runActionWithFilters()
+#16 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): StatusController->run()
+#17 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#18 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /home/sepdau/workspace/nevergiveup/index.php(14): CWebApplication->run()
+REQUEST_URI=/nevergiveup/index.php/status
+in /home/sepdau/workspace/nevergiveup/protected/views/status/_comments.php (13)
+in /home/sepdau/workspace/nevergiveup/protected/views/status/status_paging.php (101)
+in /home/sepdau/workspace/nevergiveup/protected/controllers/StatusController.php (340)
+2012/06/06 18:37:19 [error] [php] Trying to get property of non-object (/home/sepdau/workspace/nevergiveup/protected/views/status/_comments.php:13)
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(870): StatusController->renderFile()
+#1 /home/sepdau/workspace/nevergiveup/protected/views/status/status_paging.php(101): StatusController->renderPartial()
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CBaseController.php(127): require()
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/web/CBaseController.php(96): StatusController->renderInternal()
+#4 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(870): StatusController->renderFile()
+#5 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(783): StatusController->renderPartial()
+#6 /home/sepdau/workspace/nevergiveup/protected/controllers/StatusController.php(340): StatusController->render()
+#7 /home/sepdau/workspace/nevergiveup/protected/framework/web/actions/CInlineAction.php(50): StatusController->actionIndex()
+#8 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(309): CInlineAction->runWithParams()
+#9 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilterChain.php(134): StatusController->runAction()
+#10 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#12 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CInlineFilter.php(59): StatusController->filterAccessControl()
+#13 /home/sepdau/workspace/nevergiveup/protected/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#14 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(292): CFilterChain->run()
+#15 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(266): StatusController->runActionWithFilters()
+#16 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): StatusController->run()
+#17 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#18 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /home/sepdau/workspace/nevergiveup/index.php(14): CWebApplication->run()
+REQUEST_URI=/nevergiveup/index.php/status
+in /home/sepdau/workspace/nevergiveup/protected/views/status/_comments.php (13)
+in /home/sepdau/workspace/nevergiveup/protected/views/status/status_paging.php (101)
+in /home/sepdau/workspace/nevergiveup/protected/controllers/StatusController.php (340)
+2012/06/06 22:41:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 23:00:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 23:00:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 23:08:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 23:35:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 23:35:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 23:43:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/06 23:46:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/07 00:01:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/07 00:02:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/07 13:07:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "(.*".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('(.*')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nevergiveup/index.php/(.*?).png
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status
+---
+2012/06/07 13:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "(.*".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('(.*')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nevergiveup/index.php/(.*?).png
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status
+---
+2012/06/07 13:17:53 [error] [php] file_get_contents(http://3.bp.blogspot.com/_JwD5r652h00/S4LlnJNSFHI/AAAAAAAAAU8/b0CwEmD94jg/s400/share-this.png,http://www.99points.info/2010/07/facebook-style-wallpost-and-comments-system-using-jquery-ajax-and-php-reloaded/): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ (/home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php:315)
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(287): SiteController->runAction()
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): SiteController->run()
+#4 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /home/sepdau/workspace/nevergiveup/index.php(14): CWebApplication->run()
+REQUEST_URI=/nevergiveup/index.php/site/extractingurl?url=http://3.bp.blogspot.com/_JwD5r652h00/S4LlnJNSFHI/AAAAAAAAAU8/b0CwEmD94jg/s400/share-this.png,http://www.99points.info/2010/07/facebook-style-wallpost-and-comments-system-using-jquery-ajax-and-php-reloaded/
+in /home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php (315)
+in /home/sepdau/workspace/nevergiveup/index.php (14)
+2012/06/07 13:18:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nevergiveup/index.php/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status
+---
+2012/06/07 13:18:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/07 13:40:12 [error] [php] Trying to get property of non-object (/home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php:304)
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(287): SiteController->runAction()
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): SiteController->run()
+#4 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /home/sepdau/workspace/nevergiveup/index.php(14): CWebApplication->run()
+REQUEST_URI=/nevergiveup/index.php/site/acceptfriendrequest
+in /home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php (304)
+in /home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php (266)
+in /home/sepdau/workspace/nevergiveup/index.php (14)
+2012/06/07 13:41:34 [error] [php] Trying to get property of non-object (/home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php:264)
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(287): SiteController->runAction()
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): SiteController->run()
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /home/sepdau/workspace/nevergiveup/index.php(14): CWebApplication->run()
+REQUEST_URI=/nevergiveup/index.php/site/acceptfriendrequest
+in /home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php (264)
+in /home/sepdau/workspace/nevergiveup/index.php (14)
+2012/06/07 13:42:13 [error] [php] Trying to get property of non-object (/home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php:279)
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(287): SiteController->runAction()
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): SiteController->run()
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /home/sepdau/workspace/nevergiveup/index.php(14): CWebApplication->run()
+REQUEST_URI=/nevergiveup/index.php/site/declinefriendrequest
+in /home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php (279)
+in /home/sepdau/workspace/nevergiveup/index.php (14)
+2012/06/07 13:48:24 [error] [php] Trying to get property of non-object (/home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php:305)
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(287): SiteController->runAction()
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): SiteController->run()
+#4 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /home/sepdau/workspace/nevergiveup/index.php(14): CWebApplication->run()
+REQUEST_URI=/nevergiveup/index.php/site/acceptfriendrequest
+in /home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php (305)
+in /home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php (266)
+in /home/sepdau/workspace/nevergiveup/index.php (14)
+2012/06/07 13:48:35 [error] [php] Trying to get property of non-object (/home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php:305)
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(287): SiteController->runAction()
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): SiteController->run()
+#4 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /home/sepdau/workspace/nevergiveup/index.php(14): CWebApplication->run()
+REQUEST_URI=/nevergiveup/index.php/site/acceptfriendrequest
+in /home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php (305)
+in /home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php (266)
+in /home/sepdau/workspace/nevergiveup/index.php (14)
+2012/06/07 13:48:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/07 13:53:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/07 13:56:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/07 13:56:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/07 13:56:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/07 13:57:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/07 13:58:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addon.css".' in /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php:484
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(271): CController->missingAction('addon.css')
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): CController->run('addon.css')
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController('status/addon.cs...')
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/sepdau/workspace/nevergiveup/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nevergiveup/index.php/status/addon.css
+HTTP_REFERER=http://localhost/nevergiveup/index.php/status/
+---
+2012/06/07 13:58:54 [error] [php] Trying to get property of non-object (/home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php:305)
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(287): SiteController->runAction()
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): SiteController->run()
+#4 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /home/sepdau/workspace/nevergiveup/index.php(14): CWebApplication->run()
+REQUEST_URI=/nevergiveup/index.php/site/acceptfriendrequest
+in /home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php (305)
+in /home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php (266)
+in /home/sepdau/workspace/nevergiveup/index.php (14)
+2012/06/07 13:59:05 [error] [php] Trying to get property of non-object (/home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php:305)
+Stack trace:
+#0 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(287): SiteController->runAction()
+#2 /home/sepdau/workspace/nevergiveup/protected/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#3 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(276): SiteController->run()
+#4 /home/sepdau/workspace/nevergiveup/protected/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /home/sepdau/workspace/nevergiveup/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /home/sepdau/workspace/nevergiveup/index.php(14): CWebApplication->run()
+REQUEST_URI=/nevergiveup/index.php/site/acceptfriendrequest
+in /home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php (305)
+in /home/sepdau/workspace/nevergiveup/protected/controllers/SiteController.php (266)
+in /home/sepdau/workspace/nevergiveup/index.php (14)

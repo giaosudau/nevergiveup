@@ -1,7 +1,7 @@
 <!--<div class="thumbs">
     <form>
-        <input type="button" value=<?php //echo $like     ?> class="thumbup" name ="up" id=<?php //echo $status_id     ?>>
-        <input type="button" value="Dislike" class ="thumbdown" name="down" id=<?php //echo $status_id     ?>>
+        <input type="button" value=<?php //echo $like         ?> class="thumbup" name ="up" id=<?php //echo $status_id         ?>>
+        <input type="button" value="Dislike" class ="thumbdown" name="down" id=<?php //echo $status_id         ?>>
         <div id="like"></div>
 
 
@@ -61,21 +61,37 @@
     .likelink {
         background-position: left -455px;
         padding-left: 20px;
+        background-image: url("/nevergiveup/images/ico-sprite-1.17.gif");
+        background-repeat: no-repeat; 
+    }
+    .ico-sp {
+        float: left;
+        height: 16px;
+        padding-right: 5px;
+        width: 16px;
+    }
+    .icon_status{
+
+        background-position: left -501px;
+        background-image: url("/nevergiveup/images/ico-sprite-1.17.gif");
+        background-repeat: no-repeat;
+
     }
 </style>
 <div class="actlinkrt">
-    <span class="icofeed ficon_photo"></span>
-    <span rel="1338892894" id="ft_3174841026" class="grey">7H AM</span>        
-
-    <span class="icodot"></span>
-    <span class="grey">20 comments</span>
-
+    <span class="ico-sp icon_status"></span>
+    <span rel="1338892894" id="ft_3174841026" class="grey"><?php echo $status->created; ?></span>       
 
 
     <span class="icodot"></span>
+    <span class="grey"><?php echo $status->commentCount . " comments"; ?></span>
+
+
+
+    <span class="icodot"></span>
+
+
     <span class="likelink"><a onclick="" href="#" isliked="0" id="zmev-3174841026">Like</a></span>
-
-
     <span class="icodot"></span>
 
 

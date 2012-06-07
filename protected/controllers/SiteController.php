@@ -124,7 +124,7 @@ class SiteController extends Controller {
                     $user->beforeSave();
                     $user->save();
                     // create friend_list when register;
-                    $friendlist = new FriendList ();    
+                    $friendlist = new FriendList ();
                     // create friendlist
                     $friendlist->user_id = $user->user_id;
                     $friendlist->save();
@@ -243,7 +243,7 @@ class SiteController extends Controller {
         $friend_request = array('friend_request' => count(
                     Notification::model()->findAllByAttributes(array(
                         'type' => 'friend_request',
-                        'user_id' => Yii::app()->user->id,            
+                        'user_id' => Yii::app()->user->id,
                     ))),
             'request' => $friends
         );
@@ -271,13 +271,14 @@ class SiteController extends Controller {
     }
 
     public function actionDeclineFriendRequest() {
-        $friend_id = $_POST['user_id']; 
+        $friend_id = $_POST['user_id'];
         $notification_id = "";
         Notification::model()->deleteAllByAttributes(array(
             'notification_id' => Notification::model()->findByAttributes(
                     array('user_id' => Yii::app()->user->id,
                         'msg' => $friend_id))->notification_id)
         );
+        echo "SUCCESS";
         //Notification::model()->deleteByPk($notification_id);
         // notification friend decline
     }
@@ -298,15 +299,27 @@ class SiteController extends Controller {
     public function addFriend($friend_id) {
         $friend = new Friend;
         $friend->created = date('Y-m-d H:i:s');
-        $friend->user_id = $friend_id;
+        $friend->user_id = $friend_id; // user cua thang muon ket ban
         $friend->friend_list_id = FriendList::model()->findByAttributes(array(
                     'user_id' => Yii::app()->user->id
                 ))->friend_list_id;
         $friend->save();
+        //
+        $friend1 = new Friend();
+        $friend1->created = date('Y-m-d H:i:s');
+        $friend1->user_id = $friend_id;
+        
         $friend_list = new FriendList;
         $friend_list->user_id = Yii::app()->user->id;
         $friend_list->friend_id = $friend->friend_id;
         $friend_list->save();
+    }
+
+    public function actionExtractingURL() {
+        if ($_GET['url']) {
+            $url = $_GET['url'];
+            echo file_get_contents($url);
+        }
     }
 
     public static function createNotification($type) {

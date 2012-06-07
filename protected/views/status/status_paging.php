@@ -57,9 +57,11 @@ $cs->registerScriptFile($baseUrl . '/js/jquery.elastic.js');
                 <div class="button_inside_border_blue">Share</div>
             </div>
         </form>
-
+        
         <div class="clear"></div>
         <div class="load_status_out"></div>
+        <div id="linkbox"></div>
+        <div class="clear"></div>
         <div id="update" class="timeline">
 
 
@@ -68,6 +70,7 @@ $cs->registerScriptFile($baseUrl . '/js/jquery.elastic.js');
                 <?php foreach ($status as $st): ?>
                     <div class="post">
                         <div class="stbody">
+                            <a class="deletebox" href="#" id="221" title="Delete Update">X</a>
                             <div class="stimg">
                                 <img width="40" height="40"
                                      src="<?php
@@ -79,10 +82,16 @@ $cs->registerScriptFile($baseUrl . '/js/jquery.elastic.js');
                             </div>
                             <div class="sttext">
                                 <?php echo CHtml::encode($st->message); ?>
+                                
                             </div>
+                            
+                             
                             <a href="#" class="delete" style="display: none;"> Remove</a> 
+                           
                             <span>
-                                <?php $this->renderPartial("_thumbupdown"); ?>
+                                <?php $this->renderPartial("_thumbupdown", array(
+                                    'status' => $st,
+                                )); ?>
                             </span>
 <!--                            <span
                                 class="icodot"><?php echo $st->commentCount ?></span> 
@@ -102,25 +111,29 @@ $cs->registerScriptFile($baseUrl . '/js/jquery.elastic.js');
                             </div>
                             <form>
                                 <div id="<?php echo "status" . $st->status_id ?>"
-                                     class="rowcomment">
+                                     class="rowcomment bxwrtcmt">
                                     <div class="rowcommentlt">
                                         <a> <img width="40" height="40"
                                                  src="http://3.1.s50.avatar.zdn.vn/avatar_files/3/c/d/8/giaosudau_50_3.jpg">
                                         </a>
-                                        <textarea class="text_area"
+                                        
+
+                                    </div>
+                                    <div class="rowcommentlt">
+                                    <textarea class="text_area"
                                                   onKeyPress="return checkSubmit(event)"
                                                   id="txtComment<?php echo $st->status_id ?>"></textarea>
                                         <br>
-
                                     </div>
-                                    <div class="bxcmtend">
-                                        <span class="tipcmtend">Nhấn Shift + Enter để xuống dòng</span>
+                                    <div class="bxcmtend">      
+<!--                                         <span class="tipcmtend">Nhấn Shift + Enter để xuống dòng</span>-->
                                         <span class="btncmtend"> <a class="comment_submit"
                                                                     onclick="return false;" id="<?php echo $st->status_id ?>"                                                                   
                                                                     href="#"><em>Comment</em></a> <a onclick="return false;"
                                                                     rel="for_3073657831" id="emofeed_3073657831" class="emofeed"
                                                                     href="#" tabindex="0"></a>
                                         </span>
+                                        
                                     </div>
                                 </div>
                             </form>
